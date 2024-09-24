@@ -110,6 +110,10 @@ is rendered as
 $\{a,b,c\}$
 </div>
 
+|equation|description|
+|-|-|
+|$E=mc^2$|Einstein's mass-energy equation|
+
 ## ChatGPT prompts
 
 ### AI-generated questions
