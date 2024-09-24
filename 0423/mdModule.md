@@ -26,5 +26,23 @@ Unfortunately, GitHub has multiple inconsistent ways to *render* Markdown in HTM
 
 # Cloning from Tak's repo
 
+Tak has learned most of the tricks for publishing HTML content from Markdown source documents! You can clone Tak's repo and save much time trying to figure out everything on your own. GitHub provides a very convenient method to clone from another repository. 
+
+In the Dashboard, click "Import repository", then specify `https://github.com/proftak/modules` as "the URL for your source repository". You can ignore the credential questions, but name your repository before clicking "Begin import".
+
+It will take some time to finish the cloning. Once completed, click on the new repository. 
+
+# Repo settings
+
+Once cloned, you need to change a few settings. Click "Settings" when you are viewing the repo.
+
+* `Pages` Click `Pages` on the left to specify how the HTML documents are published.
+* In `Build and deployment`, s
+  * Select "Deplay from a branch" for `Source`.  
+  * Select "main" and "/root" for `Branch`.
+ 
+After the content is built, the URL to the published content will be `https://<username>.github.io/<repo>`, replace `<username>` with your GitHub username, and replace `<repo>` with the name of the repository. Note that the initial publication can take some time!
+
+
 
 
