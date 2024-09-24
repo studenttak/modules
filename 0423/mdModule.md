@@ -43,6 +43,8 @@ Once cloned, you need to change a few settings. Click "Settings" when you are vi
  
 After the content is built, the URL to the published content will be `https://<username>.github.io/<repo>`, replace `<username>` with your GitHub username, and replace `<repo>` with the name of the repository. Note that the initial publication can take some time!
 
+On the left, click `Actions`, then `General`. Under "Workflow permissions", click "Read and write permissions". Click "Save".
+
 # Editing
 
 ## Modules
