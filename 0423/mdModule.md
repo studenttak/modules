@@ -6,10 +6,10 @@ title: "Module 0423: Markdown, GitHub and OER"
 
 # GitHub
 
-GitHub is a online revision control repository (repo) service that has a user-friendly web interface. Everything in this module requires a registered account. If you already have a GitHub account, you can ignore the following steps.
+GitHub is an online revision control repository (repo) service that has a user-friendly web interface. Everything in this module requires a registered account. If you already have a GitHub account, you can ignore the following steps.
 
 1. Visit [https://github.com](https://github.com). Click `Sign up` in the upper right corner to register for an account.
-2. You can use any email address. However, use the "w1234567@arc.losrios.edu" email to get some additional benefit that is free to educators.
+2. You can use any email address. However, use the "w1234567@arc.losrios.edu" email to get some additional benefits that are free to educators.
 3. Choose a password that is difficult to guess.
 4. Think of a username.
 5. Check your email for the launch code and enter it.
@@ -53,11 +53,11 @@ A module is a unit (quantum) of publication. The repo is set up to recognize the
 
 ### Remove a module
 
-To remove a module, navigate to the directory of the module (usually a number, such as `0279`). Click `...`, then click "Delete directory". You also need to confirm with clicking "Commit changes..." A new dialog box asks for one more confirmation with an optional description.
+To remove a module, navigate to the directory of the module (usually a number, such as `0279`). Click `...`, then click "Delete directory". You also need to confirm by clicking "Commit changes..." A new dialog box asks for one more confirmation with an optional description.
 
 ### Add a module
 
-To add a new module, first navigate to the root of the repo. The URL of the root fo the repo is `github.com/<username>/<repo>`.
+To add a new module, first navigate to the root of the repo. The URL of the root of the repo is `github.com/<username>/<repo>`.
 
 Click the `+` icon, then "Create a new file".
 
