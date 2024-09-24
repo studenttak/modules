@@ -43,6 +43,29 @@ Once cloned, you need to change a few settings. Click "Settings" when you are vi
  
 After the content is built, the URL to the published content will be `https://<username>.github.io/<repo>`, replace `<username>` with your GitHub username, and replace `<repo>` with the name of the repository. Note that the initial publication can take some time!
 
+# Editing
+
+## Modules
+
+A module is a unit (quantum) of publication. The repo is set up to recognize the title of a module automatically and make a directory. When you clone the repo, it inherits all the published modules. 
+
+### Remove a module
+
+To remove a module, navigate to the directory of the module (usually a number, such as `0279`). Click `...`, then click "Delete directory". You also need to confirm with clicking "Commit changes..." A new dialog box asks for one more confirmation with an optional description.
+
+### Add a module
+
+To add a new module, first navigate to the root of the repo. The URL of the root fo the repo is `github.com/<username>/<repo>`.
+
+Click the `+` icon, then "Create a new file".
+
+In the textbox with a description of "Name your file...", type `<module number>/<mdModule.md`. `<module number>` should be replaced by a number that identifies the module. The name of the Markdown file can be `index.md` or any filename with an extension of `md`.
+
+Then edit the content in the main editing area. Remember to click "Commit changes..." to save the content.
+
+Note that as soon as the content is committed, the "workflow" to publish the committed content will start. 
+
+
 
 
 
