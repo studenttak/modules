@@ -243,7 +243,8 @@ linearly sorted by $R$.
 
 <details>
   <summary><strong>Question 8:</strong> Is the relation $<$ (less than) on the set of integers $\mathbb{Z}$ a total order?</summary>
-  <p>Yes, the relation $<$ is a total order on $\mathbb{Z}$ because it is reflexive, antisymmetric, transitive, and comparable for all integers. For any $a, b \in \mathbb{Z}$, either $a < b$, $b < a$, or $a = b$.</p>
+  <p>The AI answers: Yes, the relation $<$ is a total order on $\mathbb{Z}$ because it is reflexive, antisymmetric, transitive, and comparable for all integers. For any $a, b \in \mathbb{Z}$, either $a < b$, $b < a$, or $a = b$.</p>
+  <p>But ChatGPT is wrong. $<$ is not reflexive because an integer is not less than itself. As a result, $<$ is not a total order!</p>
 </details>
 
 <details>
