@@ -201,3 +201,58 @@ totally ordering relation is also automatically partial ordering.
 
 Elements in a set $X$ that is totally ordered by a relation $R$ can be
 linearly sorted by $R$.
+
+# AI-generated questions
+
+[This](https://chatgpt.com/share/66f43157-0cd8-8013-90e7-3296096806ec) is how these questions are generated.
+
+<details>
+  <summary><strong>Question 1:</strong> What is a relation over a set?</summary>
+  <p>A relation over a set $X$ is a subset of $X \times X$, meaning that it consists of pairs of elements from $X$. A relation specifies whether two elements from the set are related or not.</p>
+</details>
+
+<details>
+  <summary><strong>Question 2:</strong> How do we express the relation between two elements $x$ and $y$ in infix notation?</summary>
+  <p>The infix notation for expressing a relation $R$ between $x$ and $y$ is written as $xRy$. This indicates that $x$ is related to $y$ via the relation $R$.</p>
+</details>
+
+<details>
+  <summary><strong>Question 3:</strong> Given the set $X = \{1, 2, 3\}$ and a relation $R = \{(1, 2), (2, 3)\}$, is $R$ reflexive?</summary>
+  <p>No, $R$ is not reflexive because the reflexive property requires that $(1,1), (2,2), (3,3) \in R$, which is not the case here.</p>
+</details>
+
+<details>
+  <summary><strong>Question 4:</strong> For the same set $X = \{1, 2, 3\}$ and relation $R = \{(1, 2), (2, 1)\}$, is $R$ symmetric?</summary>
+  <p>Yes, $R$ is symmetric because for every $(x, y) \in R$, the pair $(y, x) \in R$. For example, since $(1, 2) \in R$, we also have $(2, 1) \in R$.</p>
+</details>
+
+<details>
+  <summary><strong>Question 5:</strong> What does it mean for a relation $R$ to be transitive?</summary>
+  <p>A relation $R$ is transitive if for all $e, f, g \in X$, whenever $(e, f) \in R$ and $(f, g) \in R$, it implies that $(e, g) \in R$.</p>
+</details>
+
+<details>
+  <summary><strong>Question 6:</strong> Is the empty relation reflexive, symmetric, and transitive?</summary>
+  <p>The empty relation is symmetric and transitive but not reflexive. Reflexivity requires that $(x, x) \in R$ for every $x \in X$, which cannot be true in an empty relation. However, it is trivially symmetric and transitive because there are no counterexamples.</p>
+</details>
+
+<details>
+  <summary><strong>Question 7:</strong> What additional condition distinguishes a totally ordered set from a partially ordered set?</summary>
+  <p>A totally ordered set requires that for all elements $e$ and $f$ in the set, either $eRf$ or $fRe$ holds. This is called the trichotomy law, ensuring that every pair of elements is comparable.</p>
+</details>
+
+<details>
+  <summary><strong>Question 8:</strong> Is the relation $<$ (less than) on the set of integers $\mathbb{Z}$ a total order?</summary>
+  <p>Yes, the relation $<$ is a total order on $\mathbb{Z}$ because it is reflexive, antisymmetric, transitive, and comparable for all integers. For any $a, b \in \mathbb{Z}$, either $a < b$, $b < a$, or $a = b$.</p>
+</details>
+
+<details>
+  <summary><strong>Question 9:</strong> Define antisymmetry in terms of a relation $R$ over a set $X$.</summary>
+  <p>A relation $R$ over a set $X$ is antisymmetric if for all $e, f \in X$, whenever $(e, f) \in R$ and $(f, e) \in R$, it implies that $e = f$.</p>
+</details>
+
+<details>
+  <summary><strong>Question 10:</strong> Consider the set $X = \{a, b\}$ and the relation $R = \{(a, a), (b, b)\}$. Is this relation a partial order?</summary>
+  <p>Yes, $R$ is a partial order because it is reflexive (both $(a, a)$ and $(b, b)$ are in $R$), antisymmetric (no $(a, b)$ or $(b, a)$ pairs exist that would violate antisymmetry), and transitive (if there were any pairs $(a, b)$ and $(b, c)$, the condition for transitivity would be satisfied, but no such pairs exist).</p>
+</details>
+
