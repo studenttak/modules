@@ -10,17 +10,26 @@ title: "Module 0424: A Brief History of Creative Commons"
 * 1999-2002: Lawrence Lessig led a team representing Eldred v. Ashcroft
 * 2001: Lawrence Lessig founded the [Creative Commons](#creative-commons)[^2]
 * 2002 (December): Lawrence Lessig published the [Creative Commons licenses](#creative-common-license) [^3]
-* 2019: close 2 billion content licensed under a Creative Common License [^2]
+* 2019: close to 2 billion content licensed under a Creative Commons License [^2]
+* 2024: 2.5 billion work licensed under a Creative Commons license
 
 # More details
 
 ## CTEA
 
-As a result of this act, the copyright term was extended to the life of the creator plus 70 years[^1]. Lawrence Lessig considered this unconstitutional. 
+As a result of this act, the copyright term was extended to the creator's life plus 70 years[^1]. Lawrence Lessig considered this unconstitutional. The timing of the CTEA also coincides with the expiration of copyright for Mickey Mouse, and Disney was known to be a sponsor of the CTEA.
+
+## Eldred v. Ashcroft[^5]
+
+Eric Eldred, the plaintiff of this case, argued that the CTEA is unconstitutional because it *retroactively* extended the copyright of some work. The complaint was filed in 1999. Ultimately, in early 2003, the Supreme Court upheld the CTEA. 
+
+However, because of the outcome of this case, Lawrence Lessig adopted a strategy that works within the confines of existing copyright laws when he created the Creative Commons licenses. 
 
 ## Creative Commons
 
-A non-profit organization founded by Lawrence Lessig and Eric Eldred in 2001. Originally, the organization aimed to counter and resist the conventional restrictive copyright practice. However, the organization eventually found a way to use existing copyright laws to promote the free sharing of content. 
+A non-profit organization founded by Lawrence Lessig and Eric Eldred in 2001. Originally, the organization aimed to counter and resist the conventional restrictive copyright practice. However, the organization eventually found a way to use existing copyright laws to promote the free sharing of content.
+
+As an organization, Creative Commons created the Creative Common Licenses that, while working within the confines of existing copyright laws, also help promote the open sharing and remix culture.
 
 ## Creative Commons License
 
@@ -33,7 +42,7 @@ While there are many variations of the Creative Commons License, the essence is 
 * 🅮: public domain
 * 🅯BY: Attribution.
 
-There are seven combinations[^4] of these attributes.
+There are seven combinations[^4] of these attributes. These licenses become the technical foundation to support the open sharing and remixing movement.
 
 # Getting involved
 
@@ -51,7 +60,8 @@ As with most non-profit organizations, Creative Commons benefits from [financial
 
 ---
 
-[^1]: [Copyright Term Extension Act (Wikipedia)](https://en.wikipedia.org/wiki/Copyright_Term_Extension_Act)
-[^2]: [Creative Commons (Wikipedia)](https://en.wikipedia.org/wiki/Creative_Commons)
-[^3]: [Creative Commons license (Wikipedia)](https://en.wikipedia.org/wiki/Creative_Commons_license)
-[^4]: [Creative Commons license - Types of licenses (Wikipedia)](https://en.wikipedia.org/wiki/Creative_Commons_license#Types_of_licenses)
+[^1]: [Copyright Term Extension Act (Wikipedia) CC-BY-SA 4.0 licensed](https://en.wikipedia.org/wiki/Copyright_Term_Extension_Act)
+[^2]: [Creative Commons (Wikipedia)  CC-BY-SA 4.0 licensed](https://en.wikipedia.org/wiki/Creative_Commons)
+[^3]: [Creative Commons license (Wikipedia) CC-BY-SA 4.0 licensed](https://en.wikipedia.org/wiki/Creative_Commons_license)
+[^4]: [Creative Commons license - Types of licenses (Wikipedia) CC-BY-SA 4.0 licensed](https://en.wikipedia.org/wiki/Creative_Commons_license#Types_of_licenses)
+[^5]: [Eldred v. Ashcroft (Wikipedia) CC-BY-SA 4.0 licensed](https://en.wikipedia.org/wiki/Eldred_v._Ashcroft)
