@@ -24,14 +24,18 @@ A non-profit organization founded by Lawrence Lessig and Eric Eldred in 2001. Or
 
 ## Creative Commons License
 
-While there are many variations of the Creative Commons License, the essence is the permission for others to share, use, and modify. In this sense, the Creative Common licenses are similar to open-source licenses.
+While there are many variations of the Creative Commons License, the essence is the permission for others to share, use, and modify. In this sense, the Creative Common licenses are similar to open-source licenses. Creative Common licenses may have one or more of the following attributes:
 
 * ⊜ND: no derivation
-* 🄍: no right reserved
+* 🄍CC0: no right reserved
 * 🄎SA: share alike (infectious license)
 * 🄏NC: Non-Commercial
 * 🅮: public domain
 * 🅯BY: Attribution.
+
+There are seven combinations[^4] of these attributes.
+
+# Getting involved
 
 
 
@@ -40,3 +44,4 @@ While there are many variations of the Creative Commons License, the essence is 
 [^1]: [Copyright Term Extension Act (Wikipedia)](https://en.wikipedia.org/wiki/Copyright_Term_Extension_Act)
 [^2]: [Creative Commons (Wikipedia)](https://en.wikipedia.org/wiki/Creative_Commons)
 [^3]: [Creative Commons license (Wikipedia)](https://en.wikipedia.org/wiki/Creative_Commons_license)
+[^4]: [Creative Commons license - Types of licenses (Wikipedia)](https://en.wikipedia.org/wiki/Creative_Commons_license#Types_of_licenses)
