@@ -32,3 +32,4 @@
 * [Module 0421: Student-Centricity, Robots, and Academic Rigor](./0421/mdModule.md)
 * [Module 0422: Introduction to `git`](./0422/mdModule.md)
 * [Module 0423: Markdown, GitHub and OER](./0423/mdModule.md)
+* [Module 0424: A Brief History Creative Commons](./0424/mdModule.md) 
