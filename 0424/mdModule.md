@@ -1,12 +1,12 @@
 ---
-title: "Module 0424: A Brief History Creative Commons" 
+title: "Module 0424: A Brief History of Creative Commons" 
 ---
 
 # _{{ page.title }}_
 
 # In a glance
 
-* 1998: Sonny Bono Copyriht Term Extension Act ([CTEA](#CETA)
+* 1998: Sonny Bono Copyright Term Extension Act ([CTEA](#CETA)
 * 1999-2002: Lawrence Lessig led a team representing Eldred v. Ashcroft
 * 2001: Lawrence Lessig founded the [Creative Commons](#creative-commons)[^2]
 * 2002 (December): Lawrence Lessig published the [Creative Commons licenses](#creative-common-license) [^3]
