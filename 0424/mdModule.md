@@ -37,7 +37,17 @@ There are seven combinations[^4] of these attributes.
 
 # Getting involved
 
+## Using Creative Commons licenses
 
+For people who want to share their creations, using Creative Commons licenses helps to improve the visibility of Creative Commons. This serves two important purposes. First, more people who want to share their creations become aware of Creative Commons. Second, the shared content is legally treated as the content creator desires.
+
+## Financially supporting Creative Commons
+
+As with most non-profit organizations, Creative Commons benefits from [financial contributions](https://creativecommons.org/support-cc/) from individuals and organizations.
+
+## Advocate and Network
+
+[Creative Commons Global Network](https://network.creativecommons.org/) is a digital global community of individuals who work together to continue the share and remix culture, as well as the basic principles behind Creative Commons licenses.
 
 ---
 
