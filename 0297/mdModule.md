@@ -478,6 +478,10 @@ $$\begin{aligned}
       
 \end{aligned}$$
 
+<script>
+	document.body.insertAdjacentHTML('afterbegin','<div>Hey hey!</div>')
+</script>
+
 ### Observation
 
 The most profound observation from this section is that *any* normal
