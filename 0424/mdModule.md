@@ -4,7 +4,7 @@ title: "Module 0424: A Brief History of Creative Commons"
 
 # _{{ page.title }}_
 
-# In a glance
+# At a glance
 
 * 1998: Sonny Bono Copyright Term Extension Act ([CTEA](#CETA)
 * 1999-2002: Lawrence Lessig led a team representing Eldred v. Ashcroft
@@ -42,7 +42,7 @@ While there are many variations of the Creative Commons License, the essence is 
 * 🅮: public domain
 * 🅯BY: Attribution.
 
-There are seven combinations[^4] of these attributes. These licenses become the technical foundation to support the open sharing and remixing movement.
+There are seven combinations[^4] of these attributes. These licenses become the technical foundation to support the open-sharing and remixing movement.
 
 # Getting involved
 
