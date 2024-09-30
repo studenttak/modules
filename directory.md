@@ -10,6 +10,7 @@
 * [Module 0293: Aleph null](./0293/mdModule.md)
 * [Module 0296: Floating point numbers](./0296/mdModule.md)
 * [Module 0298: D-ﬂipﬂop and other basic memory devices](./0298/mdModule.md)
+* [Module 0299: Clocked circuits](./0299/mdModule.md)
 * [Module 0312: Relations](./0312/mdModule.md)
 * [Module 0351: Signed vs unsigned integer representation](./0351/mdModule.md)
 * [Module 0352: Binary comparison](./0352/mdModule.md)
