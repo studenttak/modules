@@ -9,6 +9,7 @@
 * [Module 0290: Injection, Surjection and Bijection](./0290/mdModule.md)
 * [Module 0293: Aleph null](./0293/mdModule.md)
 * [Module 0296: Floating point numbers](./0296/mdModule.md)
+* [Module 0297: Propositional Logic](./0297/mdModule.md)
 * [Module 0298: D-ﬂipﬂop and other basic memory devices](./0298/mdModule.md)
 * [Module 0299: Clocked circuits](./0299/mdModule.md)
 * [Module 0312: Relations](./0312/mdModule.md)
