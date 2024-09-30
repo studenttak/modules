@@ -13,11 +13,15 @@ author: Tak Auyeung
 
 In pseudocode, the logic can be summarized as follows:
 
-* Begin with a starting state.
-* Make initial changes to one or more input pins.
+* Begin with a starting state. This is usually signified by **NC** boldfaced.
+  * The initial changes to the input pins are usually **boldfaced** on this row.
+  * For the initial NC row, update ports node-connected to the ports of updated input pins.
 * Perform the following steps until there is no change from the last step (PD row):
-  * This is a NC (node connectivity) row. Depending on the *wiring* of the circuit, update all other ports of the same node connected to a port that is changed.
-  * This is a PD (propagational delay) row. After a propagational delay, analyze and compute the output port(s) of every component that has at least one input port changed in the previous step.
+  * This is an NC (node connectivity) row. Depending on the *wiring* of the circuit, update all other ports of the same node connected to a port that is changed.
+    * As a general rule, an NC row should only have ports corresponding to input pins changed. The port of an output pin is considered an input.
+  * This is a PD (propagational delay) row. After a propagational delay, analyze and compute the output port(s) of every component with at least one input port changed in the previous NC step.
     * Only record in the table if an output port is changed from its current value.
+    * As a general rule, a PD row should only have ports corresponding to the changed output pins.
+    * When a PD row is empty, reflecting there is no change, then a steady state is reached.
 
 Mechanically, this can be done by using a spreadsheet or any table.
