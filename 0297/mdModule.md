@@ -479,6 +479,7 @@ $$\begin{aligned}
 \end{aligned}$$
 
 <script>
+	let div = document.createElement('div')
 	document.body.insertAdjacentHTML('afterbegin','<div>Hey hey!</div>')
 </script>
 
