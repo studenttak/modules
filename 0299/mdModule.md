@@ -75,6 +75,12 @@ ignored and the internal state of a register is not altered.
 This is a circuit that increments the value of the register when the
 clock ticks.
 
+<script>
+    let newElement = document.createElement('div')
+    newElement.innerHTML = "ABC"
+    insertInplace(newElement)
+</script>
+
 Note how the adder is "always" outputting a value that is one more than
 the output of the register. "Always" is quoted because there is a slight
 latency between the input of the adder changing and the output of the
@@ -93,8 +99,4 @@ the rising edge, despite the adder presents a number that is one more
 than the output of the register itself, the register does not update due
 to its edge sensitivity.
 
-<script>
-    let newElement = document.createElement('div')
-    newElement.innerHTML = "ABC"
-    insertInplace(newElement)
-</script>
+
