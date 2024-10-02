@@ -12,8 +12,8 @@ title: "Module 0299: Clocked circuits"
 
 # Registers
 
-A "register" is a multi-bit, usually resettable, usually gated and
-usually edge sensitive D-flipflop. A register usually has the following
+A "register" is a multi-bit, usually resettable, usually gated, and
+usually edge-sensitive D-flipflop. A register usually has the following
 ports (interfaces):
 
 -   *D*ata: The D port serves as a multi-bit input port so that new
@@ -23,10 +23,10 @@ ports (interfaces):
 -   *cl*oc*k*: the clk port is edge sensitive, we assume it is rising
     edge sensitive. A register only updates when the edge occurs. This
     is important because it limits the actual update to a very short
-    window when the D port has valid date.
+    window when the D port has a valid date.
 
 -   *en*able: the en port is level sensitive and "gates" a register In a
-    processor, many registers often share the same system wide clock
+    processor, many registers often share the same system-wide clock
     signal and data bus. The en port allows a single bit be used to
     designate which register be overwritten.
 
@@ -46,16 +46,16 @@ subtractors.
 Every component of a processor has a latency, measured as the time
 between the input signals presented and the output signals reflecting
 the operation of the component. For instance, a 3-bit carry-lookahead
-adder has the latency delay that is equivalent to 5 times the latency
+adder has a latency delay that is equivalent to 5 times the latency
 delay of a simple gate (AND, OR, XOR).
 
 As a result, it is important to have a basic beat to provide a system
 wide time base for all components in a processor. This time base is
 often called the system clock or simply the clock.
 
-The clock signal is often a fixed frequency square wave. The edges of a
-clock signal is like the drum or bass beat of music, providing a timing
-mechanism for all the component.
+The clock signal is often a fixed-frequency square wave. The edges of a
+a clock signal is like the drum or bass beat of the music, providing a timing
+mechanism for all the components.
 
 Not all components of a processor are "clocked". A clocked component is
 one that updates or performs an operation when the clock input
@@ -84,18 +84,18 @@ clock ticks.
 Note how the adder is "always" outputting a value that is one more than
 the output of the register. "Always" is quoted because there is a slight
 latency between the input of the adder changing and the output of the
-adder reflecting that change. In return the output of the adder is
+adder reflecting that change. In return, the output of the adder is
 connected to the input of the register.
 
 The key to this design is the clock signal. While the simulator allows
-the clicking of the clock manually. In a real computer, however, the
-clock signal keeps ticking by itself. This can also be emulated in
+the clock to be clicked manually. In a real computer, however, the
+clock signal keeps ticking. This can also be emulated in
 Logisim.
 
 The update of the register is gated by the enable (EN) port. Once
 enabled, the register only updates when there is a rising edge at the
 clock port. This permits the register to increment, but only once. After
-the rising edge, despite the adder presents a number that is one more
+the rising edge, despite the adder presenting a number that is one more
 than the output of the register itself, the register does not update due
 to its edge sensitivity.
 
