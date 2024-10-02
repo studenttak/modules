@@ -96,5 +96,5 @@ to its edge sensitivity.
 <script>
     let newElement = document.createElement('div')
     newElement.innerHTML = "ABC"
-    insertInplace()
+    insertInplace(newElement)
 </script>
