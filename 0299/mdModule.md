@@ -92,3 +92,9 @@ clock port. This permits the register to increment, but only once. After
 the rising edge, despite the adder presents a number that is one more
 than the output of the register itself, the register does not update due
 to its edge sensitivity.
+
+<div>
+    <div markdown="true">
+This is some *Markdown* text.
+    </div>
+</div>
