@@ -93,3 +93,8 @@ the rising edge, despite the adder presents a number that is one more
 than the output of the register itself, the register does not update due
 to its edge sensitivity.
 
+<script>
+    let newElement = document.createElement('div')
+    newElement.innerHTML = "ABC"
+    insertInplace()
+</script>
