@@ -94,7 +94,7 @@ than the output of the register itself, the register does not update due
 to its edge sensitivity.
 
 <div style="background: yellow">
-    <div markdown="1" style="background: green">
+<div markdown="1" style="color: green">
 This is some *Markdown* text.
-    </div>
+</div>
 </div>
