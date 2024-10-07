@@ -35,12 +35,12 @@ Let's see whether the following description works:
 
 ```c
 Nand2 n1, n2;
-    InputPin s, r;
-    OutputPin q, nq;
-    circuit.addNode(new Node(s.pin, n1.in[0]));
-    circuit.addNode(new Node(r.pin, n2.in[1]));
-    circuit.addNode(new Node(n1.out, n2.in[0], q.pin));
-    circuit.addNode(new Node(n2.out, n1.in[1], nq.pin));
+InputPin s, r;
+OutputPin q, nq;
+circuit.addNode(new Node(s.pin, n1.in[0]));
+circuit.addNode(new Node(r.pin, n2.in[1]));
+circuit.addNode(new Node(n1.out, n2.in[0], q.pin));
+circuit.addNode(new Node(n2.out, n1.in[1], nq.pin));
 ```
 
 A "node" in a circuit diagram represents a logical electrical
@@ -166,18 +166,18 @@ serves as the enabler to change the state of the SR-latch.
 The following is the text description of a D-flipflop:
 
 ```c
-        Not n;
-        Nand2 n1, n2;
-        SRLatch sr;
-        InputPin d, en;
-        OutputPin q,nq;
-        circuit.addNode(new Node(d.pin, n1.in[0], n.in));
-        circuit.addNode(new Node(en.pin, n1.in[1], n2.in[0]));
-        circuit.addNode(new Node(n.out, n2.in[1]));
-        circuit.addNode(new Node(n1.out, sr.s));
-        circuit.addNode(new Node(n2.out, sr.r));
-        circuit.addNode(new Node(sr.q, q.pin));
-        circuit.addNode(new Node(sr.nq, nq.pin));
+Not n;
+Nand2 n1, n2;
+SRLatch sr;
+InputPin d, en;
+OutputPin q,nq;
+circuit.addNode(new Node(d.pin, n1.in[0], n.in));
+circuit.addNode(new Node(en.pin, n1.in[1], n2.in[0]));
+circuit.addNode(new Node(n.out, n2.in[1]));
+circuit.addNode(new Node(n1.out, sr.s));
+circuit.addNode(new Node(n2.out, sr.r));
+circuit.addNode(new Node(sr.q, q.pin));
+circuit.addNode(new Node(sr.nq, nq.pin));
 ```
 
 Because "en" connects to both "n1" and "n2" (the NAND2 gates), when "en"
@@ -213,18 +213,18 @@ transition from 1 to 0. Most designs are sensitive only to one edge
 The following is the design of a positive-edge sensitive D-flipflop:
 
 ```c
-        SRLatch s, c;
-        Nand3 n1;
-        Nand2 n2
-        InputPin clk;
-        InputPin data;
-        OutputPin q;
-        circuit.addNode(new Node(data.pin, n2.in[1]));
-        circuit.addNode(new Node(clk.pin, s.r, n1.in[1]));
-        circuit.addNode(new Node(n2.out, n1.in[2], s.s));
-        circuit.addNode(new Node(n1.out, n2.in[0], c.r));
-        circuit.addNode(new Node(s.nq, n1.in[0],c.s));
-        circuit.addNode(new Node(c.q, q.pin));
+SRLatch s, c;
+Nand3 n1;
+Nand2 n2
+InputPin clk;
+InputPin data;
+OutputPin q;
+circuit.addNode(new Node(data.pin, n2.in[1]));
+circuit.addNode(new Node(clk.pin, s.r, n1.in[1]));
+circuit.addNode(new Node(n2.out, n1.in[2], s.s));
+circuit.addNode(new Node(n1.out, n2.in[0], c.r));
+circuit.addNode(new Node(s.nq, n1.in[0],c.s));
+circuit.addNode(new Node(c.q, q.pin));
 ```
 
 Again, a good exercise is to draw the actual design in a circuit
