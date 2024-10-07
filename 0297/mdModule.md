@@ -478,10 +478,6 @@ $$\begin{aligned}
       
 \end{aligned}$$
 
-<script>
-	let div = document.createElement('div')
-	document.body.insertAdjacentHTML('afterbegin','<div>Hey hey!</div>')
-</script>
 
 ### Observation
 
@@ -658,4 +654,119 @@ Ah, ha! This time we reach a contradiction. According to proof by
 contradiction, this means the proposed theorem is actually implied by
 the given facts.
 
-$\frac{\vdash \forall}{\mathbb{K}}$
+# AI-generated questions
+
+[This](https://chatgpt.com/share/670442d0-3034-8013-80b4-bd227f860774) is the prompt that generated these questions.
+
+<details>
+  <summary>1. What is a well-formed formula (WFF)?</summary>
+  <p>A well-formed formula (WFF) is a syntactically correct expression in a logic system. It is constructed using symbols from a set $A$ and operators from a set $\Omega$, following specific rules.</p>
+</details>
+
+<details>
+  <summary>2. How is a WFF recursively defined?</summary>
+  <p>A WFF is recursively defined as follows: 
+  - Any symbol from the set $A$ is a WFF.
+  - If $c \in \Omega_n$ is an operator with $n$ arguments, and $\phi_1, \phi_2, \dots, \phi_n$ are WFFs, then $c(\phi_1, \dots, \phi_n)$ is also a WFF.</p>
+</details>
+
+<details>
+  <summary>3. What does the transformation rule $\{\psi_1, \dots, \psi_m\} \vdash \phi$ mean?</summary>
+  <p>This transformation rule means that if all the antecedents $\psi_1, \dots, \psi_m$ are true, then the consequent $\phi$ can be inferred as true.</p>
+</details>
+
+<details>
+  <summary>4. What is the significance of the set $I$ in a propositional logic system?</summary>
+  <p>The set $I$ contains all the WFFs that are known to be true (axioms). These WFFs provide meaning to the otherwise syntactic WFFs.</p>
+</details>
+
+<details>
+  <summary>5. What are the three main types of symbols used in propositional logic?</summary>
+  <p>The three main types of symbols are:
+  - Constants: Fixed values, such as true (1) and false (0).
+  - Variables: Propositions that can be true or false.
+  - Schemata: Wildcards that match any WFF but do not appear in the WFF space.</p>
+</details>
+
+<details>
+  <summary>6. How would you express the implication $p \Rightarrow q$ using a disjunction?</summary>
+  <p>The implication $p \Rightarrow q$ can be expressed as a disjunction: $ \neg p \vee q $.</p>
+</details>
+
+<details>
+  <summary>7. What is conjunctive normal form (CNF)?</summary>
+  <p>Conjunctive normal form (CNF) is a way of expressing a Boolean formula where the formula is a conjunction of disjunctions of literals. Each clause in CNF is a disjunction, and the entire formula is a conjunction of those clauses.</p>
+</details>
+
+<details>
+  <summary>8. Can any Boolean expression be converted into CNF? How?</summary>
+  <p>Yes, any Boolean expression can be converted into CNF. This is done by using Boolean algebra rules, such as DeMorgan's laws and distribution, to simplify and transform the expression into a conjunction of disjunctions.</p>
+</details>
+
+<details>
+  <summary>9. How does resolution work in propositional logic?</summary>
+  <p>Resolution is a rule of inference that operates on clauses in CNF. It allows us to infer new clauses by eliminating a literal that appears positively in one clause and negatively in another. For example, from $(\phi \vee \psi)$ and $(\neg \psi \vee \rho)$, we can infer $(\phi \vee \rho)$.</p>
+</details>
+
+<details>
+  <summary>10. What does it mean for a propositional logic system to be sound?</summary>
+  <p>A propositional logic system is sound if every syntactic inference made by the system is semantically valid, meaning that if $ \{\phi_1, \dots, \phi_n\} \vdash \psi $, then $ \{\phi_1, \dots, \phi_n\} \models \psi $.</p>
+</details>
+
+<details>
+  <summary>11. What does it mean for a propositional logic system to be complete?</summary>
+  <p>A propositional logic system is complete if every semantically valid inference can also be derived syntactically. In other words, if $ \{\phi_1, \dots, \phi_n\} \models \psi $, then $ \{\phi_1, \dots, \phi_n\} \vdash \psi $.</p>
+</details>
+
+<details>
+  <summary>12. What is the role of proof by contradiction in propositional logic?</summary>
+  <p>Proof by contradiction involves assuming the negation of the theorem to be proven. If this assumption leads to a contradiction, then the original theorem must be true.</p>
+</details>
+
+<details>
+  <summary>13. How would you negate the expression $p \vee q$?</summary>
+  <p>Using DeMorgan's law, the negation of $p \vee q$ is $ \neg p \wedge \neg q $.</p>
+</details>
+
+<details>
+  <summary>14. How would you negate the expression $p \wedge q$?</summary>
+  <p>Using DeMorgan's law, the negation of $p \wedge q$ is $ \neg p \vee \neg q $.</p>
+</details>
+
+<details>
+  <summary>15. Convert the Boolean expression $ \neg(p \vee q) \Rightarrow r $ into CNF.</summary>
+  <p>First, express the implication as a disjunction: 
+  $ \neg(\neg(p \vee q)) \vee r $. 
+  Using DeMorgan's law: 
+  $ (p \wedge q) \vee r $. 
+  This is already in CNF form: $ (p \vee r) \wedge (q \vee r) $.</p>
+</details>
+
+<details>
+  <summary>16. Convert the Boolean expression $ \neg(p \wedge q) \Rightarrow r $ into CNF.</summary>
+  <p>First, express the implication as a disjunction: 
+  $ \neg(\neg(p \wedge q)) \vee r $. 
+  Using DeMorgan's law: 
+  $ (p \vee q) \vee r $. 
+  This simplifies to $ (p \vee r) \vee (q \vee r) $, which is in CNF.</p>
+</details>
+
+<details>
+  <summary>17. What is a transformation rule in a propositional logic system?</summary>
+  <p>A transformation rule in a propositional logic system is a syntactic rule that allows us to infer new WFFs based on a set of existing WFFs. The general form is $ \{\psi_1, \dots, \psi_n\} \vdash \phi $, where the antecedents imply the consequent.</p>
+</details>
+
+<details>
+  <summary>18. What is the significance of resolution in automated theorem proving?</summary>
+  <p>Resolution is important in automated theorem proving because it is a mechanical process that can be applied to clauses in CNF to infer new clauses. It guarantees that if a contradiction exists, it will be found, ensuring termination.</p>
+</details>
+
+<details>
+  <summary>19. What is the time complexity of converting a Boolean expression to CNF using a truth table?</summary>
+  <p>The time complexity of converting a Boolean expression to CNF using a truth table is $O(2^n)$, where $n$ is the number of variables in the expression.</p>
+</details>
+
+<details>
+  <summary>20. How would you apply proof by contradiction to prove a theorem?</summary>
+  <p>To apply proof by contradiction, you negate the theorem and add it to the set of known facts (in CNF form). Then, apply resolution to derive a contradiction. If a contradiction is found, the original theorem is proven to be true.</p>
+</details>
