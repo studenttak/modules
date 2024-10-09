@@ -221,6 +221,30 @@ By including different WFFs only involving variables, the propositional
 system can come to different conclusions (which WFFs in the WFF space
 are true).
 
+## Another example
+
+* $A=\{0,1,p,q,r,s,t,\rho,\phi,\psi\}$
+* $\Omega=\{\wedge, \vee, \Rightarrow, \neg \}$
+* $I=\{1, \neg 0, (s \vee t) \Rightarrow q, \neg q\}$, can we deduce anything about $s$ and $t$?
+* $Z=\{\{\} \vdash \psi \vee \neg \psi\, \{\phi \Rightarrow \psi, \neg \psi \} \vdash \neg \phi, \{\neg (\phi \vee \psi)\} \vdash (\neg \phi) \wedge (\neg \psi), \{\phi \wedge \psi\} \vdash \phi, \{\phi \wedge \psi\} \vdash \psi \wedge \phi\}$
+	* $\phi = (s \vee t), \psi = q$,
+		* fire $\{\phi \Rightarrow \psi, \neg \psi \} \vdash \neg \phi$,
+		* label $\neg (s \vee t)$ as true
+	* $\phi = s$, $\psi = t$,
+		* fire $\{\neg (\phi \vee \psi)\} \vdash (\neg \phi) \wedge (\neg \psi)$,
+		* label $(\neg s) \wedge (\neg t)$ as true
+	* $\phi = (\neg s) \wedge (\neg t)$,
+		* fire $\{\phi \wedge \psi\} \vdash \psi \wedge \phi\}$,
+		* label $(\neg t) \wedge (\neg s)$ as true
+	* $\phi = (\neg s) \wedge (\neg t)$,
+		* fire $\{\phi \wedge \psi\} \vdash \phi$,
+		* label $\neg s$ as true
+	* $\phi = (\neg t) \wedge (\neg s)$,
+		* fire $\{\phi \wedge \psi\} \vdash \phi$,
+		* label $\neg t$ as true
+* Conclusion: $s$ is false, $t$ is false
+
+
 ## Completeness and soundness
 
 It is important to differentiate a transformation inference from a
