@@ -226,7 +226,7 @@ are true).
 * $A=\\{0,1,p,q,r,s,t,\rho,\phi,\psi\\}$
 * $\Omega=\\{\wedge, \vee, \Rightarrow, \neg \\}$
 * $I=\\{1, \neg 0, (s \vee t) \Rightarrow q, \neg q\\}$, can we deduce anything about $s$ and $t$?
-* $Z=\\{\\{\\} \vdash \psi \vee \neg \psi\, \\{\phi \Rightarrow \psi, \neg \psi \\} \vdash \neg \phi, \\{\neg (\phi \vee \psi)\\} \vdash (\neg \phi) \wedge (\neg \psi), \\{\phi \wedge \psi\\} \vdash \phi, \\{\phi \wedge \psi\\} \vdash \psi \wedge \phi\\}$
+* $Z=\\{\\{\\} \vdash \psi \vee \neg \psi, \\{\phi \Rightarrow \psi, \neg \psi \\} \vdash \neg \phi, \\{\neg (\phi \vee \psi)\\} \vdash (\neg \phi) \wedge (\neg \psi), \\{\phi \wedge \psi\\} \vdash \phi, \\{\phi \wedge \psi\\} \vdash \psi \wedge \phi\\}$
 	* $\phi = (s \vee t), \psi = q$,
 		* fire $\\{\phi \Rightarrow \psi, \neg \psi \\} \vdash \neg \phi$,
 		* label $\neg (s \vee t)$ as true
