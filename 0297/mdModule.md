@@ -233,13 +233,13 @@ are true).
 	* $\phi = s$, $\psi = t$,
 		* fire $\\{\neg (\phi \vee \psi)\\} \vdash (\neg \phi) \wedge (\neg \psi)$,
 		* label $(\neg s) \wedge (\neg t)$ as true
-	* $\phi = (\neg s) \wedge (\neg t)$,
+	* $\phi = (\neg s), \psi = (\neg t)$,
 		* fire $\\{\phi \wedge \psi\\} \vdash \psi \wedge \phi$,
 		* label $(\neg t) \wedge (\neg s)$ as true
 	* $\phi = (\neg s), \psi = (\neg t)$,
 		* fire $\\{\phi \wedge \psi\\} \vdash \phi$,
 		* label $\neg s$ as true
-	* $\phi = (\neg t) \wedge (\neg s)$,
+	* $\phi = (\neg t), \psi = (\neg s)$,
 		* fire $\\{\phi \wedge \psi\\} \vdash \phi$,
 		* label $\neg t$ as true
 * Conclusion: $s$ is false, $t$ is false
