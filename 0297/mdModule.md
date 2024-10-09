@@ -234,7 +234,7 @@ are true).
 		* fire $\{\neg (\phi \vee \psi)\} \vdash (\neg \phi) \wedge (\neg \psi)$,
 		* label $(\neg s) \wedge (\neg t)$ as true
 	* $\phi = (\neg s) \wedge (\neg t)$,
-		* fire $\{\phi \wedge \psi\} \vdash \psi \wedge \phi\}$,
+		* fire $\{\phi \wedge \psi\} \vdash \psi \wedge \phi$,
 		* label $(\neg t) \wedge (\neg s)$ as true
 	* $\phi = (\neg s) \wedge (\neg t)$,
 		* fire $\{\phi \wedge \psi\} \vdash \phi$,
