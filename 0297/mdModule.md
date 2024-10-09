@@ -52,7 +52,7 @@ as follows:
 -   $\forall e \in A(\mathrm{isAWFF}(e))$: this means all symbols
     defined in $A$ are by themselves WFFs.
 
--   $\forall i \in \{1..n\}(\mathrm{isAWFF}(\phi_i)) \wedge 
+-   $\forall i \in \\{1..n\\}(\mathrm{isAWFF}(\phi_i)) \wedge 
               (c \in \Omega_n) \Rightarrow \mathrm{isAWFF}(c(\phi_1, \phi_2, \dots \phi_n))$:
     this means that given $n$ WFFs $\phi_i$, and $c$ is a connective
     that has $n$ arguments, $c(\phi_1,\dots \phi_n)$ is also a WFF. This
@@ -73,14 +73,14 @@ space of WFFs spanned by $A$ and $\Omega$, some of the WFFs are labeled
 
 Finally, $Z$ consists of rules that connect individual WFFs in the WFF
 space. A rule (element) in $Z$ has the form of
-$\{\psi_1,\dots \psi_m\} \vdash \phi$. The *antecedents* $\psi_i$
+$\\{\psi_1,\dots \psi_m\\} \vdash \phi$. The *antecedents* $\psi_i$
 specify patterns to be matched. If all $m$ of them are matched, then the
 consequent $\phi$ is "inferred ($\vdash$)" in the WFF space (produced).
 
 Added 2022/03/02: A more formal way to look at transformation/inference
 rules in $Z$ is as follows.
 
-Consider $W=\{\beta | \mathtt{isAWFF}(\beta) \}$ assuming we are using
+Consider $W=\\{\beta | \mathtt{isAWFF}(\beta) \\}$ assuming we are using
 the $A$, $\Omega$ of some propositional system. In other words, $W$ is
 the set of all WFFs with respect to the $A$ and $\Omega$ in
 consideration. $I \subseteq W$ because $I$ is the set of all WFFs that
@@ -95,7 +95,7 @@ $e \in Z$ has the following format:
 $M \vdash \mathtt{WFF}_q(\theta, \phi, \psi)$. $M$ itself is a set of
 WFFs that refer to $\theta, \phi, \psi$. For example, an element of $Z$
 may look like this
-$\{\theta \Rightarrow \phi, \phi \Rightarrow \psi\} \vdash \theta \Rightarrow \psi$.
+$\\{\theta \Rightarrow \phi, \phi \Rightarrow \psi\\} \vdash \theta \Rightarrow \psi$.
 [The list of human friendly inference
 rules](https://en.wikipedia.org/wiki/List_of_rules_of_inference) is a
 little long.
@@ -140,15 +140,15 @@ three main categories of symbols in $A$.
 # An (useful) example
 
 Let us examine a concrete example, our "normal" Boolean algebra system.
-In this system, the constants are $\{0,1\}$ where $0$ is false and $1$
-is true. $\Omega_1 = \{\neg\}$ because negation is the only unary
-operator. $\Omega_2 = \{\wedge, \vee\}$.
+In this system, the constants are $\\{0,1\\}$ where $0$ is false and $1$
+is true. $\Omega_1 = \\{\neg\\}$ because negation is the only unary
+operator. $\Omega_2 = \\{\wedge, \vee\\}$.
 
 Variables are typically lower case English letters, conventionally
-$\{p,q,r,s,t\}$.
+$\\{p,q,r,s,t\\}$.
 
 Schemata symbols are typically lower case Greek letters, such as
-$\{\psi, \phi, \rho\}$.
+$\\{\psi, \phi, \rho\\}$.
 
 To express $0$ is false, we include $\neg 0$ in $I$. We also spell out
 the operators and include the following WFFs in $I$:
@@ -164,7 +164,7 @@ the operators and include the following WFFs in $I$:
 The transformation rules are syntactic patterns of Boolean algebra
 rules. For example, we may have a rule like the following:
 
-$\{\psi, \phi\} \vdash \psi \wedge \phi$
+$\\{\psi, \phi\\} \vdash \psi \wedge \phi$
 
 This rule is almost trivial, but it is important. This rule specifies
 that if we can find two WFFs that are labeled true, then we can also
@@ -172,7 +172,7 @@ label the conjunction of those two WFFs (as a bigger WFF) true.
 
 If you want to examine odd transformation rules, here is one:
 
-$\{\} \vdash \phi \vee \neg \phi$
+$\\{\\} \vdash \phi \vee \neg \phi$
 
 This means that without knowing anything to be true, we can label the
 disjunction of any WFF and the negation of the WFF true.
@@ -181,12 +181,12 @@ Other transformations may include the more mundane ones to express rules
 in Boolean algebra, for example, one half of DeMorgan's law looks like
 the following:
 
-$\{\neg(\phi \vee \psi)\} \vdash (\neg \phi) \wedge (\neg \psi)$
+$\\{\neg(\phi \vee \psi)\\} \vdash (\neg \phi) \wedge (\neg \psi)$
 
 However, the transformation works in the opposite direction as well, we
 have
 
-$\{\neg \phi, \neg \psi\} \vdash \neg(\phi \vee \psi)$
+$\\{\neg \phi, \neg \psi\\} \vdash \neg(\phi \vee \psi)$
 
 You can imagine that $Z$ has quite a few rules. For a complete list of
 rules in $Z$, you can visit
@@ -223,24 +223,24 @@ are true).
 
 ## Another example
 
-* $A=\{0,1,p,q,r,s,t,\rho,\phi,\psi\}$
-* $\Omega=\{\wedge, \vee, \Rightarrow, \neg \}$
-* $I=\{1, \neg 0, (s \vee t) \Rightarrow q, \neg q\}$, can we deduce anything about $s$ and $t$?
-* $Z=\{\{\} \vdash \psi \vee \neg \psi\, \{\phi \Rightarrow \psi, \neg \psi \} \vdash \neg \phi, \{\neg (\phi \vee \psi)\} \vdash (\neg \phi) \wedge (\neg \psi), \{\phi \wedge \psi\} \vdash \phi, \{\phi \wedge \psi\} \vdash \psi \wedge \phi\}$
+* $A=\\{0,1,p,q,r,s,t,\rho,\phi,\psi\\}$
+* $\Omega=\\{\wedge, \vee, \Rightarrow, \neg \\}$
+* $I=\\{1, \neg 0, (s \vee t) \Rightarrow q, \neg q\\}$, can we deduce anything about $s$ and $t$?
+* $Z=\\{\\{\\} \vdash \psi \vee \neg \psi\, \\{\phi \Rightarrow \psi, \neg \psi \\} \vdash \neg \phi, \\{\neg (\phi \vee \psi)\\} \vdash (\neg \phi) \wedge (\neg \psi), \\{\phi \wedge \psi\\} \vdash \phi, \\{\phi \wedge \psi\\} \vdash \psi \wedge \phi\\}$
 	* $\phi = (s \vee t), \psi = q$,
-		* fire $\{\phi \Rightarrow \psi, \neg \psi \} \vdash \neg \phi$,
+		* fire $\\{\phi \Rightarrow \psi, \neg \psi \\} \vdash \neg \phi$,
 		* label $\neg (s \vee t)$ as true
 	* $\phi = s$, $\psi = t$,
-		* fire $\{\neg (\phi \vee \psi)\} \vdash (\neg \phi) \wedge (\neg \psi)$,
+		* fire $\\{\neg (\phi \vee \psi)\\} \vdash (\neg \phi) \wedge (\neg \psi)$,
 		* label $(\neg s) \wedge (\neg t)$ as true
 	* $\phi = (\neg s) \wedge (\neg t)$,
-		* fire $\{\phi \wedge \psi\} \vdash \psi \wedge \phi$,
+		* fire $\\{\phi \wedge \psi\\} \vdash \psi \wedge \phi$,
 		* label $(\neg t) \wedge (\neg s)$ as true
 	* $\phi = (\neg s) \wedge (\neg t)$,
-		* fire $\{\phi \wedge \psi\} \vdash \phi$,
+		* fire $\\{\phi \wedge \psi\\} \vdash \phi$,
 		* label $\neg s$ as true
 	* $\phi = (\neg t) \wedge (\neg s)$,
-		* fire $\{\phi \wedge \psi\} \vdash \phi$,
+		* fire $\\{\phi \wedge \psi\\} \vdash \phi$,
 		* label $\neg t$ as true
 * Conclusion: $s$ is false, $t$ is false
 
@@ -252,27 +252,27 @@ logical implication. A transformation inference is a syntactic operation
 that a computer can perform with great efficiency, it is expressed
 simply in the form as follows:
 
-$\{\phi_1,\dots \phi_n\} \vdash \psi$
+$\\{\phi_1,\dots \phi_n\\} \vdash \psi$
 
-This is also known as $\{\phi_i,\dots \phi_n\}$ syntactically entails
+This is also known as $\\{\phi_i,\dots \phi_n\\}$ syntactically entails
 $\psi$.
 
 *Semantic* entailment, on the other hand, is expressed as
 
-$\{\phi_1,\dots \phi_n\} \models \psi$
+$\\{\phi_1,\dots \phi_n\\} \models \psi$
 
 It means that using conventional Boolean algebra, it can be proven that
 
 $(\bigwedge_{i=1}^{n} \phi_i) \Rightarrow \psi$
 
 Soundness means for each transformation in $Z$,
-$(\{\phi_1, \dots \phi_n\} \vdash \psi) \Rightarrow (\{\phi_1, \dots \phi_n\} \models \psi)$.
+$(\\{\phi_1, \dots \phi_n\\} \vdash \psi) \Rightarrow (\\{\phi_1, \dots \phi_n\\} \models \psi)$.
 This is essentially saying everything that the computer models is
 correct in real life (Boolean algebra).
 
 Completeness means that for each possible logical derivation using
 Boolean algebra,
-$(\{\phi_1, \dots \phi_n\} \models \psi) \Rightarrow (\{\phi_1, \dots \phi_n\} \vdash \psi)$.
+$(\\{\phi_1, \dots \phi_n\\} \models \psi) \Rightarrow (\\{\phi_1, \dots \phi_n\\} \vdash \psi)$.
 Contrasting soundness, this means that everything that is doable using
 Boolean algebra can also be accomplished by a computer using only
 syntactic operations.
@@ -328,16 +328,16 @@ particularly helpful when we place the following restrictions:
 Because the logic is sound, we can now introduce the following
 transformation rule/production:
 
-$\{(\phi \vee \psi), (\neg \psi \vee \rho)\} \vdash (\phi \vee \rho)$
+$\\{(\phi \vee \psi), (\neg \psi \vee \rho)\\} \vdash (\phi \vee \rho)$
 
 With this, we only need the transformation rules corresponding to
 commutative properties to arrange the ordering of items.
 
 Furthermore, we also need to refine the qualification of a WFF:
 
--   $\Omega_1 = \{\neg\}$: Only negation is an element.
+-   $\Omega_1 = \\{\neg\\}$: Only negation is an element.
 
--   $\Omega_2 = \{\vee\}$: Only disjunction is an element. Conjunction
+-   $\Omega_2 = \\{\vee\\}$: Only disjunction is an element. Conjunction
     is implied.
 
 -   $\forall e \in A(\mathrm{isADE}(e))$: $\mathrm{isADE}$ means "is a
@@ -347,7 +347,7 @@ Furthermore, we also need to refine the qualification of a WFF:
 -   $\forall e \in A(\mathrm{isADE}(\neg e))$: the negation of any
     element of $A$ can be a part of a disjunction.
 
--   $\forall i \in \{1..n\}(\mathrm{isADE}(\phi_i)) \Rightarrow
+-   $\forall i \in \\{1..n\\}(\mathrm{isADE}(\phi_i)) \Rightarrow
                 \mathrm{isAWFF}(\bigvee\limits_{i=1}^{n} \phi_i)$: this
     is the most important part, a WFF is a disjunction of disjunction
     elements. There is no conjunction, and negation cannot be on the
@@ -442,9 +442,9 @@ $\phi$ into a CNF component:
 
     -   $\phi = \bigvee_{i=1}^{n}\psi_i$
 
-    -   $\forall i\in \{1..n\} \mathrm{isADE}(\psi_i) \Rightarrow \mathrm{isAWFF}(\phi)$
+    -   $\forall i\in \\{1..n\\} \mathrm{isADE}(\psi_i) \Rightarrow \mathrm{isAWFF}(\phi)$
 
-    -   $\exists i\in \{1..n\} \neg\mathrm{isADE}(\psi_i)$:
+    -   $\exists i\in \\{1..n\\} \neg\mathrm{isADE}(\psi_i)$:
 
         -   $\psi_i$ is a negation of a conjunction or disjunction:
             apply DeMorgan's law.
@@ -453,7 +453,7 @@ $\phi$ into a CNF component:
 
 -   top level operator is $\wedge$: $\phi = \bigwedge_{i=1}^n\psi_i$, in
     this case, break them up so we evaluate each $psi_i$. In other
-    words, $\forall i \in \{1,\dots n\}(psi_i \in I)$
+    words, $\forall i \in \\{1,\dots n\\}(psi_i \in I)$
 
 -   top level operator is $\neg$: $\phi = \neg \psi$ there are three
     possibilities.
