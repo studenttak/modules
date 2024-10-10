@@ -17,6 +17,7 @@
 ./0352/mdModule.md:title: "Module 0352: Binary comparison"
 ./0368/mdModule.md:title: "Module 0368: Tracking changes of a circuit"
 ./0382/mdModule.md:# _Module 0382: The recursive definition of summation and other "big-operators"_
+./0383/mdModule.md:title: "Module 0383: TTP"
 ./0394/mdModule.md:# _Module 0394: Installing riverSpider_
 ./0408/mdModule.md:# _Module 0408: What's up with GitHub and Open Educational Resources?_
 ./0409/mdModule.md:# _Module 0409: Defining a "session"_
