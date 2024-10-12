@@ -8,7 +8,7 @@ title: "Module 0425: Copyright Law"
 
 As the name implies, "copyright" is, literally, the "right to copy." Historically, the concept of copyright became important when the press was invented. Before the press was invented, content could only be copied by hand. As a result, it was easier to *limit* the availability of copies of any work.
 
-As per the U.S. Patent and Trademark Office, one primary purpose of copyright is "to promote the progress of science and useful arts, by securing for limited times to authors and inventors the exclusive rights to their respective writings and discoveries." [^1] However, there is much flexibility regarding the mentioned "rights."
+As per the U.S. Patent and Trademark Office (USPTO), one primary purpose of copyright is "to promote the progress of science and useful arts, by securing for limited times to authors and inventors the exclusive rights to their respective writings and discoveries." [^1] However, there is much flexibility regarding the mentioned "rights."
 
 For example, many corporations have "rights" related to who is licensed to produce merchandise related to copyrighted content. Disney, for instance, aggressively asserts its rights and stops any and all unlicensed replication of its copyrighted work. In this case, not only is Disney maximizing its profits from the royalty collected from licensed products, but it is also using copyrights to limit rivals in terms of the title of movies and other content. Because of the sheer amount of profit involved, Disney and other media corporations pour millions of dollars into the extension of the duration of copyright. [^2]
 
@@ -26,8 +26,30 @@ As per the U.S. Patent and Trademark Office, copyright protects "original works 
 [^4]: [U.S. Patent and Trademark Office: Copyright in General (FAQ)](https://www.copyright.gov/help/faq/faq-general.html#:~:text=Copyright%20covers%20both%20published%20and,%2C%20computer%20software%2C%20and%20architecture.)
 
 [^5]: [U.S. Patent and Trademark Office: What Does Copyright Protect?](https://www.copyright.gov/help/faq/faq-protect.html#:~:text=Copyright%20does%20not%20protect%20ideas,your%20written%20or%20artistic%20work.)
+
 # Alternative methods of protecting intellectual property
 
+## Trademark
+
+A trademark "identifies your goods or services", according to the USPTO[^6]. While a logo, a slogan, or a jingle are all forms of intellectual property, the main purpose differs from that of copyrighted content. A registered trademark offers the protection of the identity of an organization, whereas a copyrighted work is protected from unauthorized duplication and/or use of the content.
+
+## Patent
+
+While an idea in writing, such as the design of a pixie dust manufacturing machine, can be copyrighted, the copyright does not protect anyone from reading a properly licensed book of the idea and implementing the described machine. In other words, the copyright says I cannot make a photocopy of the book that describes how to make said machine, but I am allowed to follow the instructions to make, market, and sell the machine.
+
+A patent protects an invention, a method of doing something, or a design of a machine in terms of how parts interact to accomplish a purpose[^7]. 
+
+[^6]: [USPTO: What is a Trademark?](https://www.uspto.gov/trademarks/basics/what-trademark)
+
+[^7]: [USPTO: Basics of Patent Protection](https://www.uspto.gov/sites/default/files/about/offices/ous/Cooper_Union_20130604.pdf)
+
+## Trade secret
+
+Where a copyright may be used to prevent work from being copied or replicated, and a patent may be used to prevent the unlicensed implementation of an invention, the intellectual work protected by copyright and patent is *published*, available to the public. It is *what can be done* with this work that is potentially limited.
+
+A trade secret, on the other hand, is not published, or, as the USPTO describes, "generally unknown others."[^8] Trade secrets are protected by the Economic Espionage Act, which was amended by the Defend Trade Secrets Act. 
+
+[^8]: [USPTO: Intellectual Property Toolkit--Trade Secrets](https://www.uspto.gov/sites/default/files/documents/tradesecretsiptoolkit.pdf)
 # What is "public domain"?
 
 # Copyright exceptions and limitations
