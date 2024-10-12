@@ -36,3 +36,4 @@
 ./0422/mdModule.md:title: "Module 0422: Introduction to `git`"
 ./0423/mdModule.md:title: "Module 0423: Markdown, GitHub and OER"
 ./0424/mdModule.md:title: "Module 0424: A Brief History of Creative Commons" 
+./0425/mdModule.md:title: "Module 0425: Copyright Law"
