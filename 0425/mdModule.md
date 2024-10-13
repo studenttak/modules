@@ -47,9 +47,33 @@ A patent protects an invention, a method of doing something, or a design of a ma
 
 Where a copyright may be used to prevent work from being copied or replicated, and a patent may be used to prevent the unlicensed implementation of an invention, the intellectual work protected by copyright and patent is *published*, available to the public. It is *what can be done* with this work that is potentially limited.
 
-A trade secret, on the other hand, is not published, or, as the USPTO describes, "generally unknown others."[^8] Trade secrets are protected by the Economic Espionage Act, which was amended by the Defend Trade Secrets Act. 
+A trade secret, on the other hand, is not published, or, as the USPTO describes, "generally unknown to others."[^8] Trade secrets are protected by the Economic Espionage Act, which was amended by the Defend Trade Secrets Act. 
 
 [^8]: [USPTO: Intellectual Property Toolkit--Trade Secrets](https://www.uspto.gov/sites/default/files/documents/tradesecretsiptoolkit.pdf)
 # What is "public domain"?
 
+Any work that is either no longer protected by copyright, or is never protected by copyright, falls into the public domain category. Certain work sees a significant number of derivatives or adaptations as soon as it becomes public domain.[^9] It is notable that government publications fall into the public domain category by default. 
+
+In the specific area of software, the public domain category eventually evolved into CC0 (Creative Commons Zero), which is a designation that specifies "No Rights Reserved."[^10]
+
+[^10]: [Wikipedia: Creative Commons Licenses (CC-BY=4.0)](https://en.wikipedia.org/wiki/Creative_Commons_license#Zero,_public_domain)
+
+[^9] [Wikipedia: Public Domain (CC BY 4.0)](https://en.wikipedia.org/wiki/Public_domain)
+
 # Copyright exceptions and limitations
+
+## Fair Use
+
+There are four factors to evaluate and determine a fair use of copyrighted work:
+
+* Purpose and character of the use, including whether the use is of a commercial nature or is for nonprofit educational purposes.
+* Nature of the copyrighted work.
+* Amount and substantiality of the portion used in relation to the copyrighted work as a whole.
+* Effect of the use upon the potential market for or value of the copyrighted work.
+  
+## Right of First Sale
+
+For a physical copy of work, the first sale doctrine limits the rights of the holder of a copyrighted work. The party that legally purchases the copy of the copyrighted work can sell, lend, or give away the said physical copy.[^11]
+
+[^11]: [Wikipedia: First-sale doctrine (CC-BY-4.0)](https://en.wikipedia.org/wiki/First-sale_doctrine)
+
