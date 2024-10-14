@@ -40,3 +40,7 @@ It can be helpful, especially to those with ADHD, to arrange a structure around 
 Some groups of concepts are complex because of the vast interconnection between individual concepts. The short-term memory of a person is about 7 for familiar concepts, and as low as 4 for new and complex information. Short-term memory also only lasts about 20 seconds, and it can be easily interfered with and "lost."
 
 Consequently, taking notes and writing down the concepts being studied is critical to the understanding of a group of complex concepts. 
+
+Note-taking is not only helpful during a lecture to record an individual's own understanding of the material, but it is also helpful while reading materials before or after a lecture. Even though some material is *already written*, the point of taking notes is at least two-folded. First, while writing notes, a learner can choose to present the material in his/her own way, and not organized as in the original reading material. Second, the notes taken can be more concise and therefore easier to read in the future.
+
+Interestingly, the *process* of taking notes also helps to build more pathways in the neocortex between concepts. This improved familiarity is key to efficient problem-solving using one's knowledge.
