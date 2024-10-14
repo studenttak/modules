@@ -44,3 +44,9 @@ Consequently, taking notes and writing down the concepts being studied is critic
 Note-taking is not only helpful during a lecture to record an individual's own understanding of the material, but it is also helpful while reading materials before or after a lecture. Even though some material is *already written*, the point of taking notes is at least two-folded. First, while writing notes, a learner can choose to present the material in his/her own way, and not organized as in the original reading material. Second, the notes taken can be more concise and therefore easier to read in the future.
 
 Interestingly, the *process* of taking notes also helps to build more pathways in the neocortex between concepts. This improved familiarity is key to efficient problem-solving using one's knowledge.
+
+# Being on time
+
+Getting to a class late can be costly. Just being 15 minutes late means missing the first 15 minutes of a lecture. Complex subject matters have many interdependencies. As a result, missing 15 minutes can lead to the loss of connections to the earlier material, making the rest of the lecture considerably more difficult to understand. 
+
+In an 80-minute lecture, this means missing the first 15 minutes makes the other 65 minutes much more challenging. In terms of cost-benefit analysis, these 15 minutes at the beginning of the lecture is *very costly.*
