@@ -37,3 +37,4 @@
 * [Module 0423: Markdown, GitHub and OER](./0423/mdModule.md)
 * [Module 0424: A Brief History of Creative Commons](./0424/mdModule.md) 
 * [Module 0425: Copyright Law](./0425/mdModule.md)
+* [Module 0426: What to do after the First Midterm/Exam](./0426/mdModule.md)
