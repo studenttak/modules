@@ -45,8 +45,14 @@ Note-taking is not only helpful during a lecture to record an individual's own u
 
 Interestingly, the *process* of taking notes also helps to build more pathways in the neocortex between concepts. This improved familiarity is key to efficient problem-solving using one's knowledge.
 
-# Being on time
+# Being in class and on-time
+
+If a class is face-to-face in the schedule, it is **meant** to be taken in person. Even if the professor is not taking roll, it is important to attend classes. This continues to be the case even if the lectures are recorded.
+
+There are a few reasons why attending classes is important. First and foremost, there is a chance to easily ask questions in real time. Asking questions is one of the most effective ways to learn. By the time a question is formulated, some studying is already done! Many times, by the time a question is formulated, the person who is asking the question also has the answer!
+
+The second reason to attend a class in person is the structure. Some people can study effectively without external (imposed) structures because they are driven, motivated, and disciplined. The rest of us need some form of structure to keep us on task. Furthermore, the familiarity of a classroom and people in a class can also help improve performance in assessment.
 
 Getting to a class late can be costly. Just being 15 minutes late means missing the first 15 minutes of a lecture. Complex subject matters have many interdependencies. As a result, missing 15 minutes can lead to the loss of connections to the earlier material, making the rest of the lecture considerably more difficult to understand. 
 
-In an 80-minute lecture, this means missing the first 15 minutes makes the other 65 minutes much more challenging. In terms of cost-benefit analysis, these 15 minutes at the beginning of the lecture is *very costly.*
+In an 80-minute lecture, this means missing the first 15 minutes makes the other 65 minutes much more challenging. In terms of cost-benefit analysis, these 15 minutes at the beginning of the lecture are *very costly.*
