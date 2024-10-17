@@ -18,6 +18,7 @@
 * [Module 0368: Tracking changes of a circuit](./0368/mdModule.md)
 * [Module 0382: The recursive definition of summation and other "big-operators"](./0382/mdModule.md)
 * [Module 0383: TTP](./0383/mdModule.md)
+* [Module 0384: TTP conditional jumps](./0384/mdModule.md)
 * [Module 0394: Installing riverSpider](./0394/mdModule.md)
 * [Module 0408: What's up with GitHub and Open Educational Resources?](./0408/mdModule.md)
 * [Module 0409: Defining a "session"](./0409/mdModule.md)
