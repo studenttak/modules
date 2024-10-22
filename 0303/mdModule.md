@@ -43,6 +43,10 @@ c{c}
 blk1[blk1]
 blk2[blk2]
 stop@{shape: dbl-circ, label: "stop"}
+c-- T ---blk1
+c-- F ---blk2
+blk1 --- stop
+blk2 --- stop
 ```
 
 Translates to
