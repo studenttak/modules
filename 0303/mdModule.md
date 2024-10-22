@@ -37,6 +37,14 @@ else
 }
 ```
 
+```mermaid
+flowchart TD
+c{c}
+blk1[blk1]
+blk2[blk2]
+stop@{shape: dbl-circ, label: "stop"}
+```
+
 Translates to
 
 ``` c
