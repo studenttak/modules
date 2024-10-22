@@ -126,7 +126,7 @@ conditional goto statements, can be transformed.
 
 ## not
 
-``` {.objectivec language="C"}
+```c
 if (!c) goto L1;
 ```
 
@@ -203,7 +203,7 @@ operators):
 
 ## General compare
 
-``` {.objectivec language="C"}
+```c
 if (x r y) goto L1;
 ```
 
@@ -264,7 +264,7 @@ and etc. whenever it is appropriate.
 Constructs of the same nesting level should use sequential numbers as a
 suffix to differentiate from each other. For example,
 
-``` {.objectivec language="C"}
+```c
 if (x >= y)
    x++;
 if (y >= x)
@@ -273,7 +273,7 @@ if (y >= x)
 
 translates to
 
-``` {.objectivec language="C"}
+```c
 if (x < y) goto endIf1;
    x++;
 endIf1:
