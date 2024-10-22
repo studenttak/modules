@@ -26,27 +26,40 @@ constructs.
 
 ## Condition statements
 
+First, it is important to understand the C syntax of conditional statements without braces. 
+
+```c
+if (a<b)
+  a++;
+  b--;
+```
+
+The above code is actually the same as the following code.
+
+```c
+if (a<b)
+{
+  a++;
+}
+b--;
+```
+
+This is because, after the parenthesized condition, C++ expects *a single statement* to specify the then-statement. `a++;`, by itself, is a statement. After the then-statement, there are two alternatives.
+
+* the `else` keyword is encountered: then C++ expects another statement as the else-statement.
+* the `else` keyword is not encountered: then C++ *ends the conditional statement*, treating whatever that is following as a continuation *after* the conditional statement.
+
+Block statements (braces `{}`) are highly recommended in normal C++ coding because of this. However, in the context of this module, the intention is "flattening" the structured code. As a result, the intention is to get rid of block statements one step at a time.
+
 ```c
 if (c)
 {
-  blk1;
+  blk1; // blk1 is a placeholder for the then-statement
 }
 else
 {
-  blk2;
+  blk2; // blk2 is a placeholder for the else-statement
 }
-```
-
-```mermaid
-flowchart TD
-c{c}
-blk1[blk1]
-blk2[blk2]
-stop@{shape: dbl-circ, label: "stop"}
-c-- T ---blk1
-c-- F ---blk2
-blk1 --- stop
-blk2 --- stop
 ```
 
 Translates to
@@ -89,7 +102,7 @@ L2:
 ```c
 while (c)
 {
-   blk1;
+   blk1; // blk1 is a placeholder for the code in repetition
 }
 ```
 
@@ -108,7 +121,7 @@ L2:
 ```c
 do
 {
-  blk1;
+  blk1; // blk1 is a placeholder for the code in repetition
 }
 while (c);
 ```
