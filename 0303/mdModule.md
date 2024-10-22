@@ -28,24 +28,24 @@ constructs.
 
 ```c
 if (c)
-    {
-      blk1;
-    }
-    else
-    {
-      blk2;
-    }
+{
+  blk1;
+}
+else
+{
+  blk2;
+}
 ```
 
 Translates to
 
 ``` c
 if (!c) goto L1;
-      blk1;
-    goto L2;
-    L1:
-      blk2;
-    L2:
+  blk1;
+  goto L2;
+L1:
+  blk2;
+L2:
 ```
 
 If there is no `else`, then
