@@ -167,7 +167,7 @@ $$\begin{aligned}
   
 \end{aligned}$$
 
-The recursive definition ends with $i=0$ where $\Omega_0(T) = \\{ \\}$.
+The recursive definition ends with $i=0$ where $\Omega_0(T) = \\{ () \\}$.
 
 # Combination outcome set of experiments without replacement
 
