@@ -154,7 +154,7 @@ because it depends on the actual outcome of the first trial. We can
 still express it as follows:
 
 $$\begin{aligned}
-    \Omega_2(T) & = \bigcup_{e \in T}(\\{e\\} \times (T-\\{e\\})) \\
+    \Omega_2(T) & = \bigcup_{e \in T}(\{e\} \times (T-\{e\})) \\
                 & = \bigcup_{e \in T}(\\{e\\} \times \Omega_1(T-\\{e\\}))
   
 \end{aligned}$$
