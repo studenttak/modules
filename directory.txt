@@ -13,6 +13,7 @@
 ./0298/mdModule.md:title: "Module 0298: D-ﬂipﬂop and other basic memory devices"
 ./0299/mdModule.md:title: "Module 0299: Clocked circuits"
 ./0303/mdModule.md:title: "Module 0303: \"Compiling\" control structure to TTPASM"
+./0305/mdModule.md:title: "Module 0305: Counting"
 ./0312/mdModule.md:title: "Module 0312: Relations"
 ./0351/mdModule.md:title: "Module 0351: Signed vs unsigned integer representation"
 ./0352/mdModule.md:title: "Module 0352: Binary comparison"
