@@ -155,7 +155,7 @@ still express it as follows:
 
 $$\begin{aligned}
     \Omega_2(T) & = \bigcup_{e \in T}(\{e\} \times (T-\{e\})) \\
-                & = \bigcup_{e \in T}(\\{e\\} \times \Omega_1(T-\\{e\\}))
+                & = \bigcup_{e \in T}(\{e\} \times \Omega_1(T-\{e\}))
   
 \end{aligned}$$
 
@@ -163,7 +163,7 @@ Here, we can a recursive relationship that can be generalized as
 follows:
 
 $$\begin{aligned}
-    \Omega_i(T) = \bigcup_{e \in T}(\\{e\\} \times \Omega_{i-1}(T-\\{e\\}))
+    \Omega_i(T) = \bigcup_{e \in T}(\{e\} \times \Omega_{i-1}(T-\{e\}))
   
 \end{aligned}$$
 
