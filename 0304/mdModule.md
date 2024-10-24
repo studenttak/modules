@@ -1,5 +1,5 @@
 ---
-title: "Module 0304: Calling and returning"
+title: "Module 0304: Calling and returning from functions"
 ---
 
 # _{{ page.title }}_
@@ -41,7 +41,28 @@ somewhere in memory.
 # A quick digression to stack
 
 A "stack" is a data structure that enforces the LIFO (last-in-first-out)
-order. As a data structure in C++, a stack is often implemented as a
+order. In the abstract sense, a stack starts empty, let's denote that with `[]`. If there are items in the stack, the leftmost item is the "top" of the stack.
+
+A "push" operation adds an item to a stack from the "top" of the stack. The following illustrates what happens to a stack after 3 pushes:
+
+1.  push "24": `[24]`
+2.  push "61": `[61 24]`
+3.  push "11": `[11 61 24]`
+
+A "pop" operation retrieves an item from the top of the stack. The following illustrates what happens to the same stack used in the previous example after 2 pops:
+
+1.  pop: `[61 24]` retrieves 11
+2.  pop: `[24]` retrieves 61
+
+Push and pop operations can interleave. The following continues with the stack used in previous examples:
+
+1.  push "5": `[5 24]`
+2.  push "78": `[78 5 24]`
+3.  pop: `[5 24]` retrieves 78
+4.  push "100": `[100 5 24]`
+5.  pop: `[5 24]` retrieves 100
+
+As a data structure in C++, a stack is often implemented as a
 linked list of nodes. However, this is rather inefficient from the
 perspective of low-level code that is written in assembly.
 
