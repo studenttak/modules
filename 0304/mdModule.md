@@ -41,7 +41,7 @@ somewhere in memory.
 # A quick digression to stack
 
 A "stack" is a data structure that enforces the LIFO (last-in-first-out)
-order. In the abstract sense, a stack starts empty, let's denote that with `[]`. If there are items in the stack, the leftmost item is the "top" of the stack.
+order. In the abstract sense, a stack starts empty, let's denote that with `[]`. If there are items in the stack, **the leftmost item is the "top" of the stack**.
 
 A "push" operation adds an item to a stack from the "top" of the stack. The following illustrates what happens to a stack after 3 pushes:
 
