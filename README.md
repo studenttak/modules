@@ -114,6 +114,30 @@ $\{a,b,c\}$
 |-|-|
 |$E=mc^2$|Einstein's mass-energy equation|
 
+### Verticle bars in equations
+
+Jekyll incorrectly prioritizes the detection of tables over equations. Observe the following $\LaTeX$ code:
+
+```latex
+$|a|=(a<0)?-a:a$
+```
+
+It is rendered as follows:
+
+$|a|=(a<0)?-a:a$
+
+In order to fix this problem, escape the vertical bar with a backslash. The code becomes the follows.
+
+```latex
+$\|a\|=(a<0)?-a:a$
+```
+
+It is rendered as follows:
+
+$\|a\|=(a<0)?-a:a$
+
+
+
 ## ChatGPT prompts
 
 ### AI-generated questions
