@@ -136,7 +136,7 @@ $$\begin{aligned}
 
 In discrete probability, the number of permutations or combinations is used to compute a *ratio*. This ratio is expressed as $\frac{|E|}{|\Omega}$ where $E \subseteq \Omega$ is called an event set, consisting of elements of $\Omega$ that are of interest. This is the case for the Birthday Problem.
 
-If $\Omega$ is a set of tuples where ordering is important, then $E$ should also be a set of permutations. This suggests that $|E|$ can be computed as the number of permutations. Likewise when elements of $\Omega$ are sets, then $E$ also needs to be a set of sets, and it suggests the counting of combinations. This is *sort of* the case for the counting of Lotto tickets. "*Sort of*" because the PowerBall Lotto problem also has a PowerBall number that does not a part of the combination of the 5 winning numbers.
+If $\Omega$ is a set of tuples where ordering is important, then $E$ should also be a set of permutations. This suggests that $|E|$ can be computed as the number of permutations. Likewise when elements of $\Omega$ are sets, then $E$ also needs to be a set of sets, and it suggests the counting of combinations. This is *sort of* the case for the counting of Lotto tickets. "*Sort of*" because the PowerBall Lotto problem also has a PowerBall number that is not a part of the combination of the 5 winning numbers.
 
 # Permutation outcome set of experiments without replacement
 
