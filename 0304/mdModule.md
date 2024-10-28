@@ -49,7 +49,7 @@ A "push" operation adds an item to a stack from the "top" of the stack. The foll
 2.  push "61": `[61 24]`
 3.  push "11": `[11 61 24]`
 
-A "pop" operation retrieves an item from the top of the stack. The following illustrates what happens to the same stack used in the previous example after 2 pops:
+A "pop" operation retrieves and removes an item from the top of the stack. The following illustrates what happens to the same stack used in the previous example after 2 pops:
 
 1.  pop: `[61 24]` retrieves 11
 2.  pop: `[24]` retrieves 61
@@ -101,8 +101,10 @@ called pushed), the code to store something new is as follows:
   *(SP)=x; // now store x to the newly reserved location
 ```
 
+The above block of code can also be condensed into one expression: `*(--SP)=x`.
+
 To retrieve (also referred to as pop) the most recently stored item that
-is still on stack and "remove" it at the same time, we can use the
+is still on the stack and "remove" it at the same time, we can use the
 following code:
 
 ```c
@@ -110,14 +112,16 @@ following code:
   SP++;    // deallocate (free) the space
 ```
 
-Due to this methods, the proper way to initialize the SP is to make
+The above block of code can also be condensed into one expression: `x=*(SP++)`.
+
+Due to this method, the proper way to initialize the SP is to make
 point to the byte that is just one past the end of the stack area:
 
 ```c
   SP=stack+STACKSIZE;
 ```
 
-This seems to cause a problem because it is pointing past the allocated
+This seems to cause a problem because it points past the allocated
 area. However, remember that when we push items on a stack, we *first*
 decrement the SP, and as a result, the initial value of SP is never used
 for dereferencing.
@@ -152,5 +156,5 @@ subroutine, the following code can be used to return to the caller:
 
 Yes, it will.
 
-The important part is that there is a return address stored on stack for
+The important part is that there is a return address stored on the stack for
 each *invocation* of a subroutine.
