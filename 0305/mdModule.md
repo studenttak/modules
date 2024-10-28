@@ -199,3 +199,59 @@ Counting (the cardinality of an outcomes set) is important because it is
 the denominator of discrete probabilities. In other words, we cannot
 study the chances of certain specific outcomes unless we know the total
 number of possible outcomes.
+
+# AI-generated questions and answers
+
+You can see the original prompt [here](https://chatgpt.com/share/672001f4-b2a0-8013-abf4-348f0b04f7b6).
+
+<details>
+  <summary>1. What is the difference between a trial and an experiment?</summary>
+  <p>A <strong>trial</strong> is a single attempt or choice within an experiment, with a set of possible outcomes. An <strong>experiment</strong> is a series of trials where the outcome of one trial may influence subsequent ones.</p>
+</details>
+
+<details>
+  <summary>2. If an experiment consists of three trials where each trial has 5 possible outcomes, what is the total number of possible outcomes if the trials are independent?</summary>
+  <p>The total number of possible outcomes is the product of outcomes from each trial: $5 \times 5 \times 5 = 5^3 = 125$.</p>
+</details>
+
+<details>
+  <summary>3. How does "without replacement" affect the counting of outcomes in an experiment?</summary>
+  <p>"Without replacement" means that each outcome chosen in a trial is not available for subsequent trials, reducing the outcome set by one each time. For example, if there are initially 5 choices, the choices for the next trials would be 4, 3, and so on.</p>
+</details>
+
+<details>
+  <summary>4. Calculate the number of ways to choose 3 items from 5 items, assuming order matters (permutations).</summary>
+  <p>The number of permutations is $P(5,3) = \frac{5!}{(5-3)!} = \frac{5!}{2!} = \frac{120}{2} = 60$.</p>
+</details>
+
+<details>
+  <summary>5. How many combinations of 3 items can be chosen from a set of 5 items?</summary>
+  <p>The number of combinations is $C(5,3) = {5 \choose 3} = \frac{5!}{3!(5-3)!} = \frac{5!}{3! \cdot 2!} = \frac{120}{6 \times 2} = 10$.</p>
+</details>
+
+<details>
+  <summary>6. Why is the formula for combinations divided by $m!$ when calculating the number of ways to choose $m$ items from $n$ items?</summary>
+  <p>The division by $m!$ accounts for all the possible arrangements (or permutations) within each combination, as order does not matter in combinations. Thus, we divide by $m!$ to avoid counting duplicate arrangements as separate combinations.</p>
+</details>
+
+<details>
+  <summary>7. Given a set of 6 items, calculate the number of permutations and the number of combinations when choosing 2 items.</summary>
+  <p>Permutations: $P(6,2) = \frac{6!}{(6-2)!} = \frac{6!}{4!} = \frac{720}{24} = 30$<br>
+  Combinations: $C(6,2) = {6 \choose 2} = \frac{6!}{2!(6-2)!} = \frac{6!}{2! \cdot 4!} = \frac{720}{2 \cdot 24} = 15$.</p>
+</details>
+
+<details>
+  <summary>8. How does the recursive definition for combinations, $U_{i}(X)$, differ conceptually from the permutation outcome set $\Omega_i(T)$?</summary>
+  <p>The recursive definition for combinations, $U_{i}(X)$, creates a set of sets, where ordering within each subset doesn’t matter, resulting in fewer total outcomes. The permutation outcome set, $\Omega_i(T)$, considers ordering, making it significantly larger when more outcomes are involved.</p>
+</details>
+
+<details>
+  <summary>9. Why is counting outcomes important for determining probabilities in discrete math?</summary>
+  <p>Counting outcomes provides the cardinality of the sample space, which is the denominator in probability calculations. Knowing the total possible outcomes is essential to determine the likelihood of specific events.</p>
+</details>
+
+<details>
+  <summary>10. What is the formula for calculating the number of possible outcomes in an experiment of $m$ independent trials with $n$ choices in each trial, and how would you apply it to 4 trials with 6 choices each?</summary>
+  <p>The formula for $m$ independent trials with $n$ choices each is $n^m$. For 4 trials with 6 choices each, the total number of possible outcomes is $6^4 = 1296$.</p>
+</details>
+
