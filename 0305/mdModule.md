@@ -90,7 +90,7 @@ from $n$ items.
 
 # Ordering
 
-In some cases, ordering of trials in an experiment is not important. For
+In some cases, the ordering of trials in an experiment is not important. For
 example, in the case of Lottery, choosing 1,2,3,4,5 is the same as
 choosing 5,4,3,2,1.
 
@@ -100,7 +100,7 @@ permutation of the combination. There are many other permutations from
 the same combination, such as (but not limited to) $(5,4,3,2,1)$,
 $(1,2,3,5,4)$ and etc.
 
-Knowing the number permutations (order significant) of an experiment,
+Knowing the number of permutations (order significant) of an experiment,
 how do we get the number of combinations? In other words, how many
 permutations are there to a single combination?
 
@@ -131,6 +131,12 @@ $$\begin{aligned}
 		    & = \frac{n!}{m!(n-m)!}
   
 \end{aligned}$$
+
+## Choosing between permutations and combinations
+
+In discrete probability, the number of permutations or combinations is used to compute a *ratio*. This ratio is expressed as $\frac{|E|}{|\Omega}$ where $E \subseteq \Omega$ is called an event set, consisting of elements of $\Omega$ that are of interest. This is the case for the Birthday Problem.
+
+If $\Omega$ is a set of tuples where ordering is important, then $E$ should also be a set of permutations. This suggests that $|E|$ can be computed as the number of permutations. Likewise when elements of $\Omega$ are sets, then $E$ also needs to be a set of sets, and it suggests the counting of combinations. This is *sort of* the case for the counting of Lotto tickets. "*Sort of*" because the PowerBall Lotto problem also has a PowerBall number that does not a part of the combination of the 5 winning numbers.
 
 # Permutation outcome set of experiments without replacement
 
