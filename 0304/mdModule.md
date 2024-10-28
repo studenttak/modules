@@ -126,6 +126,8 @@ area. However, remember that when we push items on a stack, we *first*
 decrement the SP, and as a result, the initial value of SP is never used
 for dereferencing.
 
+For a demonstration of how a stack works in C, take a look at [this sample program](https://onlinegdb.com/qXosH1QmN).
+
 # Calling and returning
 
 The code to a subroutine has two distinct parts. The first part is to
