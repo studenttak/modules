@@ -70,7 +70,7 @@ $T-(\bigcup_{j=0}^{i-1}\\{e_j\\})$
 
 And as a result, the number of choices is
 
-$|T-(\bigcup_{j=0}^{i-1}\\{e_j\\})| = n-i$
+$\|T-(\bigcup_{j=0}^{i-1}\\{e_j\\})\| = n-i$
 
 For counting purposes, an experiment of $m$ trials has the following
 possible outcomes:
