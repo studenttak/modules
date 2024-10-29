@@ -82,7 +82,7 @@ Skipping to the end of a trace is helpful if you just want to check whether the 
 
 ## Searching for specific items
 
-Google Sheets offers some great features for searching and finding items. Use control-H or the menu item "Edit | Find and Replace" to trigger the dialog box.
+Google Sheets offers some great features for searching and finding items. Use control-H or the menu item "Edit \| Find and Replace" to trigger the dialog box.
 
 Do not replace any values in the analysis sheet, that will break the mechanism! 
 
