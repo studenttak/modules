@@ -5,7 +5,7 @@ title: "Module 0371: Tracing TTP code execution"
 
 # To start
 
-You will need your own copy of the assembler. You can clone [the assembler](https://docs.google.com/spreadsheets/d/1TcbAnH3Qj4xTizfTpMcDmXEq9CN_rVDQIa2BwSSEeXQ/edit?usp=sharing) by using the menu item "File | Make a copy", be sure to specify the (destination) Folder as some folder in *your own* Google Drive.
+You will need your own copy of the assembler. You can clone [the assembler](https://docs.google.com/spreadsheets/d/1TcbAnH3Qj4xTizfTpMcDmXEq9CN_rVDQIa2BwSSEeXQ/edit?usp=sharing) by using the menu item "File \| Make a copy", be sure to specify the (destination) Folder as some folder in *your own* Google Drive.
 
 Also, every program should start with a `nop` instruction. This is due to a bug in Logisim that only seems to matter when Logisim is run from the CLI (command line interface).
 
