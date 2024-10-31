@@ -20,6 +20,7 @@
 * [Module 0352: Binary comparison](./0352/mdModule.md)
 * [Module 0368: Tracking changes of a circuit](./0368/mdModule.md)
 * [Module 0371: Tracing TTP code execution](./0371/mdModule.md)
+* [Module 0372: Caller-callee agreement](./0372/mdModule.md)
 * [Module 0382: The recursive definition of summation and other "big-operators"](./0382/mdModule.md)
 * [Module 0383: TTP](./0383/mdModule.md)
 * [Module 0384: TTP conditional jumps](./0384/mdModule.md)
