@@ -251,7 +251,7 @@ if (x < y) goto L1;
 
 Then the matching assembly code is as follows:
 
-```
+```ttpasm
 cmp x,y
 jci L1
 ```
