@@ -1,5 +1,8 @@
 ---
 title: "Module 0303: \"Compiling\" control structure to TTPASM"
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
 ---
 
 # _{{ page.title }}_
