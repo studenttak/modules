@@ -24,6 +24,7 @@
 ./0383/mdModule.md:title: "Module 0383: TTP"
 ./0384/mdModule.md:title: "Module 0384: TTP conditional jumps"
 ./0394/mdModule.md:# _Module 0394: Installing riverSpider_
+./0395/mdModule.md:title: "Module 0395: CISP 310 Final Exam Explanations"
 ./0408/mdModule.md:# _Module 0408: What's up with GitHub and Open Educational Resources?_
 ./0409/mdModule.md:# _Module 0409: Defining a "session"_
 ./0410/mdModule.md:# _Module 0410: Start of Semester Check-list for CIS instructors_
