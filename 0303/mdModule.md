@@ -416,7 +416,7 @@ First, I can comment out the entire program, and start to work on it
 little-by-little. This can be done with a single command in `vi`, there
 is a reason to learn how to use it!
 
-```
+```ttpasm
 // int x,y,z;
 // int main(void)
 // {
@@ -438,7 +438,7 @@ is a reason to learn how to use it!
 
 Next, let us declare the global variables:
 
-```
+```ttpasm
 // int x,y,z;
 // int main(void)
 // {
@@ -467,7 +467,7 @@ byte 0
 
 The initialization portion is also quite easy.
 
-```
+```ttpasm
 // int x,y,z;
 // int main(void)
 // {
@@ -503,7 +503,7 @@ byte 0
 Adding `x` to `z` requires an intermediate register, but otherwise it is
 also straightforward.
 
-```
+```ttpasm
 // int x,y,z;
 // int main(void)
 // {
@@ -546,7 +546,7 @@ byte 0
 Now let us take care of the inner-most conditional statement. First, we
 reduce to "ugly" conditional statement code:
 
-```
+```ttpasm
 // int x,y,z;
 // int main(void)
 // {
@@ -591,7 +591,7 @@ byte 0
 DeMorgan's law allows us to simplify the negated disjunction a little.
 DeMorgan's law says $\bar{X+Y} = \bar{X}\cdot\bar{Y}$.
 
-```
+```ttpasm
     // int x,y,z;
     // int main(void)
     // {
@@ -638,7 +638,7 @@ Now is a good time to take care of the outer conjunction. We can reduce
 the conjunction by converting the conditional-goto into multiple
 statements:
 
-```
+```ttpasm
     // int x,y,z;
     // int main(void)
     // {
@@ -686,7 +686,7 @@ statements:
 
 We can now take care of the simple transformations:
 
-```
+```ttpasm
     // int x,y,z;
     // int main(void)
     // {
@@ -740,7 +740,7 @@ We can now take care of the simple transformations:
 
 Now we translate the other conjunction.
 
-```
+```ttpasm
     // int x,y,z;
     // int main(void)
     // {
@@ -798,7 +798,7 @@ Now we translate the other conjunction.
 
 Then we turn the conditional goto into native assembly language code:
 
-```
+```ttpasm
     // int x,y,z;
     // int main(void)
     // {
