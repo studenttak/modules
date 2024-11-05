@@ -4,7 +4,7 @@ title: "Module 0427: Creative Commons Licenses, Remixes, and Derivative"
 
 # _{{ page.title }}_
 
-# Just sharing
+# Just including and sharing
 
 It is not uncommon to include content that is licensed by one of the Creative Common licenses. For example, the following photograph conveys a sense of sharing better than words.
 
@@ -14,3 +14,16 @@ It is not uncommon to include content that is licensed by one of the Creative Co
 </div>
 
 In this case, it is important to include the attribution because of the "BY" part of the Creative Commons (CC) license. Even if some work does not include the "BY" for attribution, it is *always* a good idea to include attribution!
+
+The only restriction in this case is that NC (NonCommerical) content should not be included in for-profit content.
+
+# Derivation
+
+Let's say that I want to make an inside joke about "NoDerivative". I may start with a Creative Commons Licensed image like the following:
+
+<div markdown="1">
+![Picture of derivative](https://upload.wikimedia.org/wikipedia/commons/f/fe/Acceleration_as_derivative_of_velocity_along_trajectory.svg)
+<p class="attribution">"<a rel="noopener noreferrer" href="https://commons.wikimedia.org/w/index.php?curid=36419077">Acceleration as derivative of velocity along trajectory</a>" by <a rel="noopener noreferrer" href="https://commons.wikimedia.org/wiki/User:Fred_the_Oyster">Fred the Oyster</a> is licensed under <a rel="noopener noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/?ref=openverse">CC BY-SA 4.0 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /><img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" style="height: 1em; margin-right: 0.125em; display: inline;" /></a>.</p>
+</div>
+
+
