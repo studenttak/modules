@@ -8,7 +8,7 @@ title: "Module 0427: Creative Commons Licenses, Remixes, and Derivative"
 
 It is not uncommon to include content that is licensed by one of the Creative Common licenses. For example, the following photograph conveys a sense of sharing better than words.
 
-<div markdown="true">
+<div markdown="1">
 ![Boys sharing a book](https://live.staticflickr.com/4343/36111195234_a6db56c0a9_b.jpg)
 ["Ta-Oy boys share a book"](https://www.flickr.com/photos/127744844@N06/36111195234) by [US Department of State](https://www.flickr.com/photos/127744844@N06) is licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/?ref=openverse).
 </div>
