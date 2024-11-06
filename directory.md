@@ -1,3 +1,4 @@
+* [Module 0082: Big and little Omicron, Omega and Theta](./0082/mdModule.md)
 * [Module 0279: Boolean Operator](./0279/mdModule.md)
 * [Module 0280: Basic Set Notations](./0280/mdModule.md)
 * [Module 0281: Transistor to logic gate](./0281/mdModule.md)
