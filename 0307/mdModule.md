@@ -113,7 +113,7 @@ void someFunc(uint8_t x, uint8_t y, uint8_t z)
 
 The corresponding frame looks like the following:
 
-|offset from where SP point|what|
+|offset from where SP points to|what|
 |-|-|
 |6|z|
 |5|y|
@@ -160,11 +160,44 @@ someFunc: // entry point of the callee
 In the body of `someFunc`, accessing a local variable or parameter can be very mechanical. Generally, the following *pattern* works:
 
 ```ttpasm
-  ldi a,someFunc_b // load offset to a register
-  add a,d // the address of the item on the frame
+  ldi a,someFunc_b // a=&b-SP load offset to a register
+  add a,d // a=&b the address of the item on the frame
 ```
 
 Whether the address of a frame item should be dereferenced depends on the context.
+
+It is important to keep track of the stack pointer using this approach! If the stack pointer is not pointing to the local variable of the lower address, then adjustments need to be made. This usually happens in a function call. Let's reexamine `someFunc` with a call to `someOtherFunc`:
+
+```c
+void someFunc(uint8_t x, uint8_t y, uint8_t z)
+{
+   uint8_t a,b,c;
+   // ...
+   someOtherFunc(&a,z);
+   // ...
+}
+```
+
+The code to call `someOtherFunc` is then as follows
+
+```ttpasm
+  ldi a,someFunc_z // a=&z-SP
+  add a,d // a=&z
+  ld  a,(a) // a=z
+  dec d
+// at this point, the SP points to one byte below local var a!
+  st  (d),a // push z
+  ldi a,someFunc_a 1 + // reg a=&(local var a)-SP, add 1 to compensate for the second argument already pushed
+  add a,d // reg a=&(local var a)
+  dec d
+  st  (d),a // push &(local var a)
+  ldi a,. 6 +
+  dec d
+  st  (d),a // push return address
+  inc d // deallocate the first argument
+  inc d // deallocate the second argument
+  
+```
 
 # Exercise 1
 
