@@ -129,7 +129,7 @@ From the callee's perspective, some label definitions can be used to first compu
 someFunc_a: 0 // offset from where D points to to find local var a
 someFunc_b: someFunc_a 1 + // offset to local var b
 someFunc_c: someFunc_b 1 + // offset to local var c
-someFunc_localVarSize: someFunc c 1 + // # bytes used for local vars
+someFunc_localVarSize: someFunc_c 1 + // # bytes used for local vars
 ```
 
 Parameters are also in a call frame, they can also have their offsets defined by labels. In this example, the following label definitions can apply:
