@@ -28,7 +28,7 @@ The way you specify a path depends on your operating system, please Google searc
 * `ranContent.csv`: this is the file that you downloaded earlier from the "RAM file" sheet of the assembler.
 * `logFile.tsv`: this is the log file that is in a TSV (tab separated values) format.
 
-Go back to the assembler, switch to the "traceRawData" sheet, then use the menu item "File | Import" to trigger the "Import file" dialog. Click "Upload", select the `logFile.tsv` from earlier.
+Go back to the assembler, switch to the "traceRawData" sheet, then use the menu item "File \| Import" to trigger the "Import file" dialog. Click "Upload", select the `logFile.tsv` from earlier.
 
 You will then be presented with the option of importing the TSV, be sure to follow these specifications:
 
