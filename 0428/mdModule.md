@@ -23,8 +23,8 @@ Some instructions or definitions are partially correct. In these cases, the answ
 
 Some instructions or definitions may be missing entirely. In these cases, an answer is in the form of an insertion of instructions or definitions. In this case, use an arrow to point to the insertion point of the additional code. Here is an example:
 
-> `cmp a,b`
-> `       ` $\leftarrow$ `jzi L1 // if (a==b) goto L1; need to branch if a==b`
+> `cmp a,b`<br />
+> `       ` $\leftarrow$ `jzi L1 // if (a==b) goto L1; need to branch if a==b`<br />
 > `// get here when a != b
 
 ## Deletion
