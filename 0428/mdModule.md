@@ -31,6 +31,6 @@ Some instructions or definitions may be missing entirely. In these cases, an ans
 
 Some instructions or definitions should not be present, at all. In these cases, an answer is a strike-out of the instructions of definitions that should be removed. Here is an example:
 
-> ~~`cpr d,c`~~ ` // do not overwrite register d, it is needed later`
+> ~~`cpr d,c`~~ `// do not overwrite register d, it is needed later`
 
 
