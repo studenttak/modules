@@ -33,4 +33,20 @@ Some instructions or definitions should not be present, at all. In these cases, 
 
 > ~~`cpr d,c`~~ `// do not overwrite register d, it is needed later`
 
+# How a correction is scored
 
+## Incorrect code is corrected
+
+If the original incorrect code is corrected and commented on, it receives 4/4 for that particular incorrect code. The lack of comments deducts one point to 3/4.
+
+## Incorrect code is not corrected
+
+Usually, this receives zero point, 0/4. However, if there is commenting that *identifies* the flaw, some partial credit may be earned. The partial credit, if any, is 1/4.
+
+## Correction itself is flawed
+
+If the incorrect code is identified and explained, but the correction itself is also flawed, partial credit will be earned. Depending on the flaw, the partial credit ranges from 1/4 to 3/4.
+
+## Correct code is "corrected"
+
+If the provided code is correct, and a "correction" is made, points will be deducted because the correction indicates a lack of understanding of how the original code works. The deduction is -1/4. This means four "corrections" to correct code counteract the properly commented correction of incorrect code.
