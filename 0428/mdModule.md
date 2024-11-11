@@ -25,7 +25,7 @@ Some instructions or definitions may be missing entirely. In these cases, an ans
 
 > `cmp a,b`<br />
 > `       ` $\leftarrow$ `jzi L1 // if (a==b) goto L1; need to branch if a==b`<br />
-> `// get here when a != b
+> `// get here when a != b`
 
 ## Deletion
 
