@@ -46,7 +46,7 @@ This section is the bulk of notetaking. This section has several purposes:
 
 * Capture a condensed version of the lecture material. This is particularly important if the lecture is not recorded. Use shorthand instead of full sentences whenever possible. As long as the person who will be reading this understands the material, it is fine! Capturing parts of the lecture is helpful for review purposes, but jotting down notes is also a way to stay focused and engaged in a lecture. 
 * Capture questions. In many situations, questions cannot be asked during a lecture. Therefore, it is important to record these questions to be reviewed, and hopefully answered, after a lecture.
-* Personal *Eureka!* moments. A lecture may not mention some implicit connections with past material. Personal discoveries during a lecture, call them *Eureka!* moments, or epiphanies, do not last long in one's mind. Write it down, and put a star next to it!
+* Personal [*Eureka!*](https://www.psychologytoday.com/us/blog/somebodies-and-nobodies/201207/eureka-epiphany-and-enlightenment) moments. A lecture may not mention some implicit connections with past material. Personal discoveries during a lecture, call them *Eureka!* moments, or epiphanies, do not last long in one's mind. Write it down, and put a star next to it!
 * Capture the expectations of a lecture. What do I think I will be learning? What questions may be answered? 
 
 Because the in-lecture section has to serve multiple purposes and record material from different sources (the presentation and the thoughts of the notetaker), it is bound to be **messy**!  This is why we need the [post-lecture](#post-lecture) section.
