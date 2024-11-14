@@ -41,8 +41,6 @@ $\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}_1)=0$
 
 $\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}\_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}\_{i-1})+\mathrm{was}(\mathtt{TYPE}\_{i-1})$
 
-${m}_i$
-
 The total number of bytes used by a `STRUCTX` is, therefore, 
 
 $\mathrm{sizeof}(\mathtt{STRUCTX})=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{mn})+\mathrm{was}(\mathtt{TYPEn})$
