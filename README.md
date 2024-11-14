@@ -138,25 +138,25 @@ $\|a\|=(a<0)?-a:a$
 
 ## Underscores in equations
 
-This is yet another Jekyll issue. Because Jekyll prioritizes looking for pairs of underscores (to italicize), it "eats" up pairs of underscores even in equations. This only happens in some very specific situations.
+This is yet another Jekyll issue. Because Jekyll prioritizes looking for pairs of underscores (to italicize), it "eats" up pairs of underscores even in equations. This only happens in some very specific situations when an underscore is right after a close brace.
 
 ```latex
-$\mathtt{m}_i=\mathtt{m}_{i-1}$
+${m}_i=m_{i-1}$
 ```
 
 is rendered incorrectly as follows:
 
-$\mathtt{m}_i=\mathtt{m}_{i-1}$
+${m}_i=m_{i-1}$
 
 However, if the underscores are escaped, then it works:
 
 ```latex
-$\mathtt{m}\_i=\mathtt{m}\_{i-1}$
+${m}\_i=m\_{i-1}$
 ```
 
 is rendered as follows:
 
-$\mathtt{m}\_i=\mathtt{m}\_{i-1}$
+${m}\_i=m\_{i-1}$
 
 
 ## ChatGPT prompts
