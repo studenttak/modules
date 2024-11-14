@@ -37,7 +37,7 @@ As with array items, structure members `m1` to `mn` are likely to be aligned to 
 
 Let $\mathrm{offset}(s,m)$ define the offset of member $m$ from the beginning (address) of a structure $s$, then the following equations describe the offsets to each member:
 
-$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m1})=0$
+$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}_1)=0$
 
 $\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}\_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}\_{i-1})+\mathrm{was}(\mathtt{TYPE}\_{i-1})$
 
