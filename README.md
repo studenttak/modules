@@ -138,25 +138,25 @@ $\|a\|=(a<0)?-a:a$
 
 ## Underscores in equations
 
-This is yet another Jekyll issue. Because Jekyll prioritizes looking for pairs of underscores (to italicize), it "eats" up pairs of underscores even in equations. 
+This is yet another Jekyll issue. Because Jekyll prioritizes looking for pairs of underscores (to italicize), it "eats" up pairs of underscores even in equations. This only happens in some very specific situations.
 
 ```latex
-$a_1 = a_2$
+$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}_{i-1})+\mathrm{was}(\mathtt{TYPE}_{i-1})$
 ```
 
 is rendered incorrectly as follows:
 
-$a_1 = a_2$
+$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}_{i-1})+\mathrm{was}(\mathtt{TYPE}_{i-1})$
 
 However, if the underscores are escaped, then it works:
 
 ```latex
-$a\_1 = a\_2$
+$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}\_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}\_{i-1})+\mathrm{was}(\mathtt{TYPE}\_{i-1})$
 ```
 
 is rendered as follows:
 
-$a\_1 = a\_2$
+$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}\_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}\_{i-1})+\mathrm{was}(\mathtt{TYPE}\_{i-1})$
 
 
 ## ChatGPT prompts
