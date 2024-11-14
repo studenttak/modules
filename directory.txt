@@ -23,6 +23,7 @@
 ./0368/mdModule.md:title: "Module 0368: Tracking changes of a circuit"
 ./0371/mdModule.md:title: "Module 0371: Tracing TTP code execution"
 ./0372/mdModule.md:title: "Module 0372: Caller-callee agreement"
+./0374/mdModule.md:title: "Module 0374: Structures and arrays in TTPASM"
 ./0382/mdModule.md:# _Module 0382: The recursive definition of summation and other "big-operators"_
 ./0383/mdModule.md:title: "Module 0383: TTP"
 ./0384/mdModule.md:title: "Module 0384: TTP conditional jumps"
