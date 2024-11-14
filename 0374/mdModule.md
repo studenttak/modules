@@ -39,7 +39,7 @@ Let $\mathrm{offset}(s,m)$ define the offset of member $m$ from the beginning (a
 
 $\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m1})=0$
 
-$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}_{i-1})+\mathrm{was}(\mathtt{TYPE}_{i-1})$
+$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}\_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}\_{i-1})+\mathrm{was}(\mathtt{TYPE}\_{i-1})$
 
 The total number of bytes used by a `STRUCTX` is, therefore, 
 
