@@ -7,17 +7,15 @@ author: Tak Auyeung
 
 # Arrays
 
-In an architecture with a memory with of multiple bytes, items in an array are usually aligned to the memory width. Let us consider the following example in C/C++:
+Most compilers allocate space for arrays in a straightforward way.  Let us consider the following declaration where `TYPEX` is the name of a type, and `BUFLEN` is a natural number.
 
 ```c
 TYPEX buffer[BUFLEN];
 ```
 
-Assuming the memory width (also known as the "word size") of an architecture is $w$ bytes, then each item takes up $v=\mathrm{was}(\mathtt{TYPEX})= \left \lceil \frac{\mathtt{sizeof(TYPEX)}}{w} \right \rceil \cdot w$ bytes in the array `buffer`. "was" is the abbreviation of "word-aligned size." As a result, the entire array takes up $\mathtt{BUFLEN} \cdot v$ bytes.
+The total number number of bytes used by variable `buffer` is `sizeof(TYPEX)*BUFLEN`. 
 
-Note that this general equation also works for TTP, but in this case, $w=1$.
-
-Most architectures that have $w>1$ are still byte-addressable. The address of `buffer[i]` in byte address is, therefore, $\mathtt{\&buffer}+i\cdot v$.
+In terms of address (for byte-addressable architectures), `&buffer[i]` has an address of `&buffer + sizeof(TYPEX) * i`.
 
 # Structures
 
@@ -33,17 +31,13 @@ struct STRUCTX
 };
 ```
 
-As with array items, structure members `m1` to `mn` are likely to be aligned to multiples of $w$ bytes for efficiency. Unless specific "pragmas" are specified, members of a structure are ordered as in the definition. 
+The word-width of an architecture is the width of the data bus in the processor core. Currently, most production processors have a word-width of 64 bits, also known as 8 bytes. If a member is of a scalar type, then a compiler attempts to make sure the entire member can be accessed in a single memory operation based on the word-width of the processor.
 
-Let $\mathrm{offset}(s,m)$ define the offset of member $m$ from the beginning (address) of a structure $s$, then the following equations describe the offsets to each member:
+Unless otherwise instructed using a `pragma`, a compiler sequentially allocates storage for members within a structure. The offset of a member from the beginning of a structure is based on the offset of a previous member, but aligned to make sure each elemental type can be accessed in a single memory cycle.
 
-$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}_1)=0$
+The offset to the first member is easy to compute because it is at the beginning of the entire structure, the offset is 0 (zero).
 
-$\mathrm{offset}(\mathtt{STRUCTX},\mathtt{m}\_i)=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{m}\_{i-1})+\mathrm{was}(\mathtt{TYPE}\_{i-1})$
-
-The total number of bytes used by a `STRUCTX` is, therefore, 
-
-$\mathrm{sizeof}(\mathtt{STRUCTX})=\mathrm{offset}(\mathtt{STRUCTX}, \mathtt{mn})+\mathrm{was}(\mathtt{TYPEn})$
+The offsets to the rest of the members are a little more complicated. Let `offset(m)` refer to the byte offset to member `m` in a structure, `alignment(m)` refer to the size of the largest elemental type of member `m`. Then $\mathtt{offset}(\mathtt{m}_{i+1}) = \lceiling \frac{\mathtt{offset}(m_i)+\mathtt{sizeof}(\mathtt{m}\_i)}{\mathtt{alignment}(\mathtt{m}\_{i+1})} \rceiling \times \mathtt{alignment}(\mathtt{m}\_{i+1})$. The symbol $\lceiling x \rceiling$ is the ceiling function that returns the smallest integer that is greater than or equal to $x$.
 
 # TTP implementation
 
