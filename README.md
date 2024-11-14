@@ -136,6 +136,27 @@ It is rendered as follows:
 
 $\|a\|=(a<0)?-a:a$
 
+## Underscores in equations
+
+This is yet another Jekyll issue. Because Jekyll prioritizes looking for pairs of underscores (to italicize), it "eats" up pairs of underscores even in equations. 
+
+```latex
+$a_1 = a_2$
+```
+
+is rendered incorrectly as follows:
+
+$a_1 = a_2$
+
+However, if the underscores are escaped, then it works:
+
+```latex
+$a\_1 = a\_2$
+```
+
+is rendered as follows:
+
+$a\_1 = a\_2$
 
 
 ## ChatGPT prompts
