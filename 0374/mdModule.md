@@ -39,6 +39,8 @@ The offset to the first member is easy to compute because it is at the beginning
 
 The offsets to the rest of the members are a little more complicated. Let `offset(m)` refer to the byte offset to member `m` in a structure, and `alignment(m)` refers to the size of the largest elemental type of member `m`. Then $\mathtt{offset}(\mathtt{m}_{i+1}) = \lceil \frac{\mathtt{offset}(m_i)+\mathtt{sizeof}(\mathtt{m}\_i)}{\mathtt{alignment}(\mathtt{m}\_{i+1})} \rceil \times \mathtt{alignment}(\mathtt{m}\_{i+1})$. The symbol $\lceil x \rceil$ is the ceiling function that returns the smallest integer greater than or equal to $x$.
 
+The alignment width of a structure is the maximum of the alignments of its members. In this example, `alignment(STRUCTX) = max(alignment(m1), alignment(m2),... alignment(mn))`.
+
 # TTP implementation
 
 The concept of a `struct` is merely a matter of tracking the offset from the beginning of a structure to the members, please an overall size of a `struct`.
