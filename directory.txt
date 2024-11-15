@@ -51,3 +51,4 @@
 ./0427/mdModule.md:title: "Module 0427: Creative Commons Licenses, Remixes, and Derivative"
 ./0428/mdModule.md:title: "Module 0428: Exam 2 Question 3 Code Correction"
 ./0429/mdModule.md:title: "Module 0429: Notetaking"
+./0430/mdModule.md:title: "Module 0430: Study/Learning Skill Builder"
