@@ -8,7 +8,13 @@ title: "Module 0430: Study/Learning Skill Builder"
 
 This is the "home page" of tools developed to help students build effective study/learning skills and habits.
 
-# Components
+# In the brewer
+
+These are the components in the brewer (incubator).
+
+
+
+# Components ready for use
 
 ## Notetaking
 
