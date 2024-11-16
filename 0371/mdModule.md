@@ -40,7 +40,7 @@ After the import, the "analysis" sheet displays the log of the execution of your
 
 # The shorter way
 
-You can use `riverSpider` to automate a large portion of the steps. You can [get the Mac OS version](https://drive.google.com/file/d/1g63nlTRa-Ibgj0ZUf3HX1fbdSrW90JBs/view?usp=drive_link) or [the Windows version](https://drive.google.com/file/d/1REBrhNtwiNTDC4EHHfEaOBJOuYxYrlWb/view?usp=drive_link), depending on your operating system.
+You can use `riverSpider` to automate a large portion of the steps. Go to the [shared folder](https://drive.google.com/drive/folders/0BxsMACqxAFNwUkJxWmJKZ0R3Ync?resourcekey=0--R62aR3g30jRuZT_YoC30Q&usp=drive_link) and download `riverSpiderMac.zip` for Mac OS or `cygRiverSpider.7z` for Windows. Watch [this video](https://youtu.be/SO_uWlbsZkk) for a step-by-step explanation. Windows users should watch the entire video, while Mac OS users can skip to the 10:00 mark after downloading and unzipping `riverSpiderMac.zip`.
 
 ## Windows
 
