@@ -15,7 +15,7 @@ First, use an editor to edit the source code in mnemonics.
 
 Then copy and paste the code to column A of the source sheet of the assembler. If the assembler reports any errors, fix the errors in the editor, and repaste the entire program in column A of the "source" sheet.
 
-Switch to the "RAM file" sheet, and use the menu item "File \| Download |\ Comma Separated Values" to download the CSV file.
+Switch to the "RAM file" sheet, and use the menu item "File \| Download \| Comma Separated Values" to download the CSV file.
 
 On a command line, run the program. The exact command depends on the OS, but generally, it is something like the following:
 
@@ -26,9 +26,9 @@ java -jar path/to/logisim310.jar path/to/processor0004.circ -load path/to/ramCon
 The way you specify a path depends on your operating system, please Google search for a tutorial that is specific to your operating system. 
 
 * `ranContent.csv`: this is the file that you downloaded earlier from the "RAM file" sheet of the assembler.
-* `logFile.tsv`: this is the log file that is in a TSV (tab separated values) format.
+* `logFile.tsv`: this is the log file that is in a TSV (tab-separated values) format.
 
-Go back to the assembler, switch to the "traceRawData" sheet, then use the menu item "File \| Import" to trigger the "Import file" dialog. Click "Upload", select the `logFile.tsv` from earlier.
+Go back to the assembler, switch to the "traceRawData" sheet, then use the menu item "File \| Import" to trigger the "Import file" dialog. Click "Upload", and select the `logFile.tsv` from earlier.
 
 You will then be presented with the option of importing the TSV, be sure to follow these specifications:
 
