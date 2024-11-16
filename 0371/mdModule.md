@@ -15,7 +15,7 @@ First, use an editor to edit the source code in mnemonics.
 
 Then copy and paste the code to column A of the source sheet of the assembler. If the assembler reports any errors, fix the errors in the editor, and repaste the entire program in column A of the "source" sheet.
 
-Switch to the "RAM file" sheet, and use the menu item "File | Download | Comma Separated Values" to download the CSV file.
+Switch to the "RAM file" sheet, and use the menu item "File \| Download |\ Comma Separated Values" to download the CSV file.
 
 On a command line, run the program. The exact command depends on the OS, but generally, it is something like the following:
 
