@@ -17,6 +17,65 @@ The total number number of bytes used by variable `buffer` is `sizeof(TYPEX)*BUF
 
 In terms of address (for byte-addressable architectures), `&buffer[i]` has an address of `&buffer + sizeof(TYPEX) * i`.
 
+General indexing is difficult in TTPASM because of the lack of a multiplication instruction. However, indexing into an array of byte-size elements is easy. The following is an example:
+
+```ttpasm
+// assume the address of an array is in register c
+// assume the index is in register b
+// assume an element is one byte wide
+add b,c // b is now the address of the element at the index
+```
+
+If the size of an element is a power of 2, the code is still relatively simple:
+
+```ttpasm
+// assume the address of an array is in register c
+// assume the index is in register b
+// assume an element is four-byte wide
+add b,b // b=2*b
+add b,b // b=2*b, now it is 4x the initial value
+add b,c // b is now the address of the element at the index
+```
+
+However, there is no easy way to generate a template of code given the size of each array element. 
+
+Pointer arithmetic is generally as difficult. However, pointer increment can be done easily. Consider the following C code:
+
+```c
+TYPEX *ptr;
+//...
+ptr+1 // compute the value of this expression
+```
+
+The equivalent TTPASM code is as follows:
+
+```ttpasm
+// assume the value of ptr is in register a
+// assume the size of TYPEX is defined by the label TYPEX_size
+ldi b,TYPEX_size
+add a,b // a is now the value of ptr+1
+```
+
+Many algorithms related to arrays only need to access elements sequentially. As a result, the code can be converted to use pointer-arithmetic operations. For example, the following C code computes the sum of an array:
+
+```c
+for (i = 0, sum = 0; i < N; ++i)
+{
+  sum += a[I];
+}
+```
+
+It can be changed to use pointer arithmetic as follows:
+
+```c
+for (i=0, sum=0, ptr=a; i<N; ++i)
+{
+  sum += *(ptr++);
+}
+```
+
+Note that the expression `sum += *(ptr++)` is the same as first performing `sum += *ptr`, then performing `ptr++`.
+
 # Structures
 
 A general structure definition in C/C++ looks like this:
@@ -43,7 +102,9 @@ The alignment width of a structure is the maximum of the alignments of its membe
 
 The alignment width of an elemental (scalar) type `t` is defined as `alignment(t)=min(wordWidth, sizeof(t))`.
 
-# TTP implementation
+## TTP implementation
+
+### Structure definition
 
 TTP has a `wordWidth` of 1. As a result, there are no alignment issues!
 
@@ -65,8 +126,17 @@ This translates to the following labels in TTPASM:
 ```ttpasm
 X_x: 0
 X_ptr: X_x 1 +
-X-y: X_ptr 1 +
+X_y: X_ptr 1 +
 X_size: X_x 1 +
 ```
 
-Arrays indexing is more tricky because TTP lacks a hardware multiplier.
+### Accessing members of a structure
+
+Because labels are used to track the offset of a member from the beginning of a structure, given the address of a structure is in a register already, the address of a member is the sum of the address of the structure and the offset to the member. Using the example from the previous section, the following is an example:
+
+```ttpasm
+// assume the address of a struct X is in register b
+ldi a,X_y
+add b,a // b is now the address of member y of the struct X
+```
+
