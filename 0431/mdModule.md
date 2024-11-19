@@ -34,4 +34,4 @@ This is not a challenge specific to CC licenses, but rather a challenge of the m
 
 Everyone has some intrinsic laziness, or resistance to do certain kinds of work. In my case, changing how I teach a class to fit the framework of a book is more work than originating my material. However, the majority of my colleagues consider originating work to be more work than following the framework of published textbooks.
 
-
+This challenge is more complex to overcome because it is in part due to the intrinsic drive and resistance of each person. Being paid for developing OER work is a solution, but only a short-term one. Grants and other forms of monetary incentives will, eventually, run out. 
