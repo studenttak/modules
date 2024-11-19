@@ -20,8 +20,10 @@ When I started teaching full-time at American River College, writing my teaching
 
 Creative Commons (CC) licenses play an important part in the development and adoption of OER. When properly marked, CC-licensed work can be located quickly with the help of a search engine. This helps others locate and adopt OER content. As opposed to being in the public domain, work that is CC-licensed has enforceable distribution restrictions. This is important because otherwise, for-profit publishers can simply "borrow" all the work free of charge and improve their own profitability. On this point, CC and many OER developers like myself share similar values.
 
+For many years, the copyright of my work specifically states "all rights reserved," but I give explicit permission to students to make copies of my work. Now, I am licensing all my work as CC BY-NC-SA.
+
 # The awareness challenge
 
 Because American River College is still in its infancy regarding the development and adoption of OER material, most faculty members are unaware of CC licenses. This lack of awareness can lead to anxiety when adopting any work that "seems to be free." The same lack of awareness can also inadvertently lead to work being published in the public domain, resulting in a loss of control of rights. 
 
-Fortunately, awareness can be improved by the organization of workshops, presentations, and even software tools. 
+Fortunately, awareness can be improved by the organization of workshops, presentations, and even software tools. For example, a Google Form can be used to implement a decision tree to help educators determine which CC licenses meet certain requirements. 
