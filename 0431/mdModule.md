@@ -26,4 +26,12 @@ For many years, the copyright of my work specifically states "all rights reserve
 
 Because American River College is still in its infancy regarding the development and adoption of OER material, most faculty members are unaware of CC licenses. This lack of awareness can lead to anxiety when adopting any work that "seems to be free." The same lack of awareness can also inadvertently lead to work being published in the public domain, resulting in a loss of control of rights. 
 
-Fortunately, awareness can be improved by the organization of workshops, presentations, and even software tools. For example, a Google Form can be used to implement a decision tree to help educators determine which CC licenses meet certain requirements. 
+Fortunately, awareness can be improved by workshops, presentations, and even software tools. For example, a Google Form can implement a decision tree to help educators determine which CC licenses meet certain requirements. 
+
+# The motivation challenge
+
+This is not a challenge specific to CC licenses, but rather a challenge of the motivation to develop and create work that is CC-licensed.
+
+Everyone has some intrinsic laziness, or resistance to do certain kinds of work. In my case, changing how I teach a class to fit the framework of a book is more work than originating my material. However, the majority of my colleagues consider originating work to be more work than following the framework of published textbooks.
+
+
