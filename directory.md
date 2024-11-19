@@ -52,3 +52,4 @@
 * [Module 0428: Exam 2 Question 3 Code Correction](./0428/mdModule.md)
 * [Module 0429: Notetaking](./0429/mdModule.md)
 * [Module 0430: Study/Learning Skill Builder](./0430/mdModule.md)
+* [Module 0431: Creative Commons in OER](./0431/mdModule.md)
