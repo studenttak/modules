@@ -17,3 +17,6 @@ jobs:
       - name: Nuke modules
         run: |
           echo "about to remove folders $(ls -d [0-9][0-9][0-9][0-9])"
+          rm -Rf [0-9][0-9][0-9][0-9]
+          git commit -m "nuked modules"
+          git push
