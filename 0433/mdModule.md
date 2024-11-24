@@ -42,7 +42,14 @@ However, the *implementation* of MD rendering at `GitHub` has many inconsistenci
 * Content is organized as "modules." Each module has its own folder to contain the MD file and potentially additional media files that the MD file references.
 * The content is processed and published by `github.io`. There is a delay in the update of the source material and the actual publication of the content. This lag depends on many factors, including the amount of content in a project.
 
-While `GitHub` can natively do this, this OER project includes the configuration and customization necessary to render MD as correctly as possible.
+While `GitHub` can natively do this, this OER project includes the configuration and customization necessary to render MD as correctly as possible. Please note that the "preview" of the editor does not render some MD code correctly, especially those involving equations, diagrams (using `Mermade`), and HTML/Javascript for rendering purposes.
+
+For content quality assurance, the following steps are suggested. Assume `username` is the user name of the repository, and `reponame` is the name of the repository, and `moduleNum` is the 4-digit number of the module:
+
+* Go to `https://github.com/username/reponame/actions` and check to make sure all workflow runs are completed, each with a check in a green circle. If a workflow is in progress (a turning yellow circle), wait for it to complete.
+* Go to `https://username.github.io/reponame/moduleNum/mdModule.html` to check the content.
+
+In order to circumvent issues related to static and out-of-date Markdown rendering, the configuration of this repository relies on many client-side (browser side) Javascript rendering.
 
 ## Getting started
 
