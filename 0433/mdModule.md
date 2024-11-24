@@ -83,11 +83,47 @@ Refresh this page a few times. In a couple of minutes, the top should report tha
 The repository comes with its own OER content that you probably do not need. To remove the current modules, follow these instructions:
 
 * First, navigate to the home of your repository at `https://github.com/username/reponame`
-* Click on a module (a four-digit folder name).
-  * Click the "..." on the right hand side.
-  * Click "Delete Directory"
-  * Click "Commit changes"
-  * Confirm by clicking "Commit changes" again.
+* To safely remove modules one by one:
+  * Click on a module (a four-digit folder name).
+    * Click the "..." on the right-hand side.
+    * Click "Delete Directory"
+    * Click "Commit changes"
+    * Confirm by clicking "Commit changes" again.
+* To (dangerously!) remove all modules:
+  * First, consider backing up all the files by downloading the repo as a ZIP file!
+  * Click "Actions" on the horizontal menu bar.
+  * On the left pane, under "Actions", "All workflows", click `rmModules`.
+  * Make sure this is what you want to do!
+  * On the right pane, click "Run workflow".
+  * Click "Run workflow" in the pop-up.
+  * There is a lag, then the pop-up will show that the workflow is in progress (turning a yellow circle to the left).
+
+### Writing a new module
+
+To start a new module:
+
+* Navigate to the home of the repository `https://github.com/username/reponame`.
+* Note the number of the last module.
+* Depending on the width of your screen, click the `+` button or the button labeled `Add file`.
+* Select "Create new file".
+* In the textbox immediately to the right side of your repository name, type something like `0241/mdModule.md`, and replace `0241` with a number that is after the number of the last module.
+* In the main text area, start with the following content.
+
+```markdown
+---
+title: "Module 0241: Some module"
+---
+
+# _{{ page.title }}_
+```
+
+The explanation is as follows:
+
+* `---` is the marker to begin and end the YAML (yet-another markup language) section.
+  * In this section, `title: "Module 0241: Some module"` specifies the title of the page. If this is not the format you want to use, some additional customization needs to be done.
+* `# _{{ page.title }}_` uses HTML H1 as the title of the HTML. This part is optional and you can specify alternative formatting.
+
+Then type the actual content in this document. Remember to to click "Commit changes..." when you are done, or at a point that you want to save the document.
 
 
 
