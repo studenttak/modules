@@ -55,3 +55,4 @@
 ./0431/mdModule.md:title: "Module 0431: Creative Commons in OER"
 ./0432/mdModule.md:title: "Module 0432: A general description of TTP"
 ./0433/mdModule.md:title: "Module 0433: Creative Commons, Open Educational Resources, and GitHub"
+./0433/mdModule.md:title: "Module 0241: Some module"
