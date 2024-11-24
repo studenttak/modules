@@ -54,3 +54,4 @@
 * [Module 0430: Study/Learning Skill Builder](./0430/mdModule.md)
 * [Module 0431: Creative Commons in OER](./0431/mdModule.md)
 * [Module 0432: A general description of TTP](./0432/mdModule.md)
+* [Module 0433: Creative Commons, Open Educational Resources, and GitHub](./0433/mdModule.md)
