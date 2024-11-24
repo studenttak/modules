@@ -30,4 +30,12 @@ While there are many other platforms to author, publish, and adopt OER, `GitHub`
 
 ## Licensing
 
-The strength of `GitHub` is the ease of spinning off an OER project. As such, while `GitHub` is also useful for OERs that have ND in its CC license, OERs that are CC licensed without ND benefit even more from the `git` mechanisms.
+The strength of `GitHub` is the ease of spinning off an OER project. As such, while `GitHub` is also useful for OERs that have ND in their CC licenses, OERs that are CC licensed without ND benefit even more from the `git` mechanisms.
+
+## On the technical side
+
+`GitHub` supports Markdown (MD) as a markup language. MD is a fairly rich markup language that can fall back to HTML when necessary. However, even by itself, it supports normal text formatting, equations, drawing various types of diagrams, formatting tables, etc. Compared to HTML, MD is easier to learn and type even with a plain-text editor like `notepad` in Windows. There are many open-source and free previewing editors that can render MD side-by-side with the MD document. 
+
+However, the *implementation* of MD rendering at `GitHub` is flawed. 
+
+
