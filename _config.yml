@@ -12,7 +12,8 @@ mermaid: true
 markdown: kramdown
 # mathjax: true
 kramdown:
-  math_engine: mathjax
+  # math_engine: mathjax
+  math_engine: null
   input: GFM
   auto_ids: true
   syntax_highlighter_opts:
