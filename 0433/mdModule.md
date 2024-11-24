@@ -125,6 +125,10 @@ The explanation is as follows:
 
 Then type the actual content in this document. Remember to to click "Commit changes..." when you are done, or at a point that you want to save the document.
 
+## Customization
 
+### Choice of CC license for the content
 
+If you remove all the modules that came with the repository, you can choose your own content license. To change your content license, modify `_layouts/default.html`. Specifically, locate the line that starts with "This site is licensed under..", then modify the URL to the Creative Commons license and update the symbols.
 
+Note that the licensing of the content is independent of the licensing of the HTML and YAML files that form the framework of the publication mechanism.
