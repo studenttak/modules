@@ -36,6 +36,32 @@ The strength of `GitHub` is the ease of spinning off an OER project. As such, wh
 
 `GitHub` supports Markdown (MD) as a markup language. MD is a fairly rich markup language that can fall back to HTML when necessary. However, even by itself, it supports normal text formatting, equations, drawing various types of diagrams, formatting tables, etc. Compared to HTML, MD is easier to learn and type even with a plain-text editor like `notepad` in Windows. There are many open-source and free previewing editors that can render MD side-by-side with the MD document. 
 
-However, the *implementation* of MD rendering at `GitHub` is flawed. 
+However, the *implementation* of MD rendering at `GitHub` has many inconsistencies and issues. Many of these inconsistencies are discovered and managed in the OER project that hosts this page. The architecture of this OER project is as follows:
+
+* The content is hosted by `github.com`. All the MD and associated graphics files are parts of a `GitHub` repository.
+* Content is organized as "modules." Each module has its own folder to contain the MD file and potentially additional media files that the MD file references.
+* The content is processed and published by `github.io`. There is a delay in the update of the source material and the actual publication of the content. This lag depends on many factors, including the amount of content in a project.
+
+While `GitHub` can natively do this, this OER project includes the configuration and customization necessary to render MD as correctly as possible.
+
+## Getting started
+
+### Setting up an account
+
+To get started, an OER developer first registers with [GitHub](https://github.com) for a free account using the "Sign up" button. As the last page of the registration process, it is best to identify as a "Teacher". In order to finish the registration as a teacher, you will need to use a school email address (one that ends with `.edu`).
+
+As for the top 2 things you want to do with GitHub, "Connect with other developers" and "Contribute to Open Source projects" are good choices for an OER project.
+
+### Cloning the project
+
+Go to the [home page](https://github.com) after you sign in. Click ["Import repository"](https://github.com/new/import). You will need to fill in the details of the repository.
+
+* "The URL for your *source* repository:" This is the URL of the repository to clone from. Specify `https://github.com/proftak/modules.git` here.
+* "Your username for your source repository" and "Your access token or password for your source repository": leave both blank because you are cloning from a public repository, there is a username or password to specify.
+* Under "Your new repository details", you can use any repository name.
+* You can also mark your project as "Public" or "Private".
+  * If you intend the OER to be ND, choose "Private."
+
+Click "Begin import" to start the process.
 
 
