@@ -62,6 +62,33 @@ Go to the [home page](https://github.com) after you sign in. Click ["Import repo
 * You can also mark your project as "Public" or "Private".
   * If you intend the OER to be ND, choose "Private."
 
-Click "Begin import" to start the process.
+Click "Begin import" to start the process. It may take a few minutes to import the project.
+
+### Publishing the rendered pages
+
+Because the OER content is cloned along with the configuration and customization, you probably want to clean up the content before starting your own. Before doing that, however, it is helpful to first make sure the content is published correctly.
+
+To check the published content, go to the URL `https://username.github.io/reponame` (`username` is a placeholder of your actual `GitHub` user name, and `reponame` is a placeholder of your actual repository name). You are likely to see a "404" error because there are some additional steps to finish the configuration and customization.
+
+Head to the home of your repository. This page has an URL of the form of `https://github.com/username/reponame`. Click "Settings".
+
+On the left pane, under "Code and automation", click "Actions", then click "General". In "Action Permissions", under "workflow permissions", select "Read and write permissions." This is necessary for the workflow script to perform its action. Click "Save".
+
+At this point, you are still under "Settings" (red underline on the top bar). Under "Code and automation", click "Pages". Under "Build and deployment" and "Source", Keep the default "Deploy from a branch". On the same page, under "Branch", make sure you are using "main" as the branch, and "/root" as the root directory. 
+
+Refresh this page a few times. In a couple of minutes, the top should report that "Your site is live at..."
+
+### Cleaning up the content
+
+The repository comes with its own OER content that you probably do not need. To remove the current modules, follow these instructions:
+
+* First, navigate to the home of your repository at `https://github.com/username/reponame`
+* Click on a module (a four-digit folder name).
+  * Click the "..." on the right hand side.
+  * Click "Delete Directory"
+  * Click "Commit changes"
+  * Confirm by clicking "Commit changes" again.
+
+
 
 
