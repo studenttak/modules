@@ -64,18 +64,18 @@ the pseudocode:
 -   $Q \leftarrow S$ initialize the set of "boundary" vertices that have
     a just updated length to a destination
 
--   $E' \leftarrow \{\}$, this is the set of solution edges
+-   $E' \leftarrow \\{\\}$, this is the set of solution edges
 
--   while $Q \neq \{\}$ do
+-   while $Q \neq \\{\\}$ do
 
     -   select $v \in Q$ such that $\forall w \in Q(L(v) \le L(w))$, $v$
         has the shortest length to a destination of all the boundary
         vertices, it looks the most promising
 
-    -   $Q \leftarrow Q - \{v\}$ because we are now expanding the
+    -   $Q \leftarrow Q - \\{v\\}$ because we are now expanding the
         boundary using $v$
 
-    -   for each $e \in \{(w,v)|(w,v) \in E\}$ do:
+    -   for each $e \in \\{(w,v)|(w,v) \in E\\}$ do:
 
         -   assume $e = (w,v)$
 
@@ -84,14 +84,14 @@ the pseudocode:
             -   $L(w) \leftarrow L(v)+d(e)$
 
             -   for each $(w,u) \in E'$ do:
-                $E' \leftarrow E' - \{(w,u)\}$ because we just found a
+                $E' \leftarrow E' - \\{(w,u)\\}$ because we just found a
                 shorter path from vertex $w$ to a destination
 
-            -   $E' \leftarrow E' \cup \{(w,v)\}$ to remember the new
+            -   $E' \leftarrow E' \cup \\{(w,v)\\}$ to remember the new
                 edge leading from $w$ to a destination that has the
                 shortest path
 
-            -   $Q \leftarrow Q \cup \{w\}$ because vertex $w$ is
+            -   $Q \leftarrow Q \cup \\{w\\}$ because vertex $w$ is
                 updated, there it is (perhaps again) on the boundary of
                 vertices just updated with a shortest length to a
                 destination, this triggers the (re)evaluation of
@@ -109,7 +109,7 @@ the form of $h:(V\times V)\rightarrow
   \mathbb{R}^*$. It is a quick-to-compute function that estimates the
 actual shortest distance between two vertices. Because the A\* algorithm
 only has one destination $x$, the heuristic function only needs to be
-$h:(V \times \{x\}) \rightarrow \mathbb{R}^*$ because there is no need
+$h:(V \times \\{x\\}) \rightarrow \mathbb{R}^*$ because there is no need
 to know the heuristic between a vertex and any non-destination vertex.
 
 In order for the A\* algorithm to function, the heuristic function has
@@ -172,7 +172,7 @@ following presents the pseudocode of the A\* algorithm:
         path, each vertex along this path has a reverse pointer to the
         vertex before it, back to vertex $s$.
 
--   Let $O \leftarrow \{s\}$, start with the start vertex, this is very
+-   Let $O \leftarrow \\{s\\}$, start with the start vertex, this is very
     different from Dijkstra's algorithm that starts with all the
     destination vertices. However, $O$ is still the frontier set that
     represents vertices that have recently been updated and are
@@ -184,7 +184,7 @@ following presents the pseudocode of the A\* algorithm:
     -   Let $c \in O$ such that $\forall w \in O(f(c) \le f(w))$, this
         picks up the "most promising" candidates from $O$.
 
-    -   $O \leftarrow O - \{c\}$, remove it so it is not going to be
+    -   $O \leftarrow O - \\{c\\}$, remove it so it is not going to be
         reconsidered endlessly.
 
     -   for each neighbor $n \in V$ such that $(c, n) \in E$ do
@@ -196,7 +196,7 @@ following presents the pseudocode of the A\* algorithm:
             $n$, so $n$ should be considered as a candidate on the
             shortest path now
 
-            -   $O \leftarrow O \cup \{n\}$
+            -   $O \leftarrow O \cup \\{n\\}$
 
             -   $\mathrm{prev}(n) \leftarrow c$
 
@@ -206,8 +206,8 @@ following presents the pseudocode of the A\* algorithm:
             -   $f(n) \leftarrow g(n)+h(n,x)$ update estimated length of
                 shortest path from $s$ through $n$ to $x$
 
--   define $G_{s,x}=(V,E_{s,x})$ such that
-    $\forall w \in V(\mathrm{prev}(w)=v \Leftrightarrow (v,w) \in E_{s,x})$,
+-   define $G\_{s,x}=(V,E\_{s,x})$ such that
+    $\forall w \in V(\mathrm{prev}(w)=v \Leftrightarrow (v,w) \in E\_{s,x})$,
     this is an alternative way to create the solution graph. The good
     thing about this approach is that there is no need to erase edges
     along the way like the Dijkstra's algorithm. The two methods are
