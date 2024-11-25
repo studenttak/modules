@@ -215,7 +215,7 @@ following presents the pseudocode of the A\* algorithm:
 
 # Graph Examples
 ```mermaid
-flowchart TD
+flowchart LR
 a(a)
 b(b)
 c(c)
