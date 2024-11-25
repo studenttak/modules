@@ -33,7 +33,7 @@ of a digraph where $(a,b)\in E \Leftrightarrow (b,a) \in E$.
 A path $p$ in a graph $G=(V,E)$ is a tuple of vertices. Edges from $E$
 must lead from one vertex to the next. In other words,
 
-$\forall i \in \mathbb{N}(i \le |p|-2 \Rightarrow (p[i],p[i+1]) \in E)$
+$\forall i \in \mathbb{N}(i \le \|p\|-2 \Rightarrow (p[i],p[i+1]) \in E)$
 
 Furthermore, a path cannot contain duplicates of a vertex.
 
@@ -75,7 +75,7 @@ the pseudocode:
     -   $Q \leftarrow Q - \\{v\\}$ because we are now expanding the
         boundary using $v$
 
-    -   for each $e \in \\{(w,v)|(w,v) \in E\\}$ do:
+    -   for each $e \in \\{(w,v)\|(w,v) \in E\\}$ do:
 
         -   assume $e = (w,v)$
 
