@@ -212,3 +212,15 @@ following presents the pseudocode of the A\* algorithm:
     thing about this approach is that there is no need to erase edges
     along the way like the Dijkstra's algorithm. The two methods are
     actually equivalent.
+
+# Graph Examples
+```mermaid
+flowchart TD
+a(a)
+b(b)
+c(c)
+d(d)
+e(((e)))
+f(((f)))
+a -- 10 -> e
+```
