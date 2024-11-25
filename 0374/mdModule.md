@@ -115,7 +115,7 @@ For example, let us consider the following C `struct` definition:
 ```c
 struct X
 {
-  uint8_t x
+  uint8_t x;
   struct X *ptr;
   uint8_t y;
 };
@@ -127,7 +127,7 @@ This translates to the following labels in TTPASM:
 X_x: 0
 X_ptr: X_x 1 +
 X_y: X_ptr 1 +
-X_size: X_x 1 +
+X_size: X_y 1 +
 ```
 
 ### Accessing members of a structure
