@@ -195,3 +195,30 @@ d== 2 ==>f
 b-- 4 -->a
 f-- 2 -->d
 ```
+
+## For the A* algorithm
+
+```mermaid
+flowchart LR
+a(a)
+b(b)
+c(c)
+d(d)
+e(e)
+f((f))
+e-- 5 -->a
+a-- 8 -->b
+a-- 5 -->c
+a-- 2 -->d
+d-- 20 -->f
+c-- 10 -->f
+b-- 2 -->f
+d-- 2 -->c
+c-- 2 -->b
+e.. 13 ..>f
+a.. 5 ..> f
+b.. 2 ..> f
+c.. 1 ..> f
+d.. 0 ..> f
+f.. 0 ..> f
+```
