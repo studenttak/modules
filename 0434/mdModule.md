@@ -65,7 +65,7 @@ ldi a,5 // a=5
 
 # Label definition
 
-A label definition starts at the beginning of a line, optionally with white spaces before. The syntax of a label definition is a C identifier followed immediately by, without any white space character, a colon. No instruction can be specified on the same line as a label definition.
+A label definition starts at the beginning of a line, optionally with white spaces before. The syntax of a label definition is a valid C identifier (the first character can be an underscore or letters, subsequent characters can include digits) followed immediately by, without any white space character, a colon. No instruction can be specified on the same line as a label definition.
 
 Using this syntax, a label is defined to the current location in the assembly process. A label can be followed by a postfix expression, then the expression defines the value of the label. The value of the postfix expression must be resolved at assemble time.
 
