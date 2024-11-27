@@ -50,20 +50,15 @@ the pseudocode:
 
 -   let the graph be $G=(V,E)$, and $d:E \rightarrow \mathbb{R}^*$ be a
     distance function of all edges
-
 -   let $S \subseteq V$ be a subset of vertices identified as
     destinations
-
 -   for each $v \in S$: $L(v) \leftarrow 0$ because a destination vertex
     is at a length of 0 from a destination.
-
 -   for each $v \in (V-S)$: $L(v) \leftarrow \infty$ because prior to
     any exploration, there is no known path between a non-destination
     vertex and a destination
-
 -   $Q \leftarrow S$ initialize the set of "boundary" vertices that have
     a just updated length to a destination
-
 -   $E' \leftarrow \\{\\}$, this is the set of solution edges
 -   while $Q \neq \\{\\}$ do
     -   select $v \in Q$ such that $\forall w \in Q(L(v) \le L(w))$, $v$
@@ -118,83 +113,59 @@ vertices, The A\* algorithm explores "forward" from a start vertex. The
 following presents the pseudocode of the A\* algorithm:
 
 -   Let the graph in question be $G=(V,E)$
-
 -   Let the distance function be $d:E \rightarrow \mathbb{R}^*$, this
     functions maps each edge to a non-negative real number as the
     distance
-
 -   Let $s \in V$ be a start vertex, unlike Dijkstra's algorithm, A\*
     only works with a single start vertex.
-
 -   Let $x \in V$ be a destination vertex, again, unlike Dijkstra's
     algorithm, A\* only works for one destination vertex. It is possible
     to create the illusion of multiple destination vertices by zero
     distance edges from real destination vertices to a single "virtual"
     destination.
-
 -   Let $h:(V \times V) \rightarrow \mathbb{R}^*$ be a heuristic
     function where $h(v,w)$ is an underestimate of the cost of the
     shortest path from $v$ to $w$. Due to the under estimating nature,
     such a heuristic is also called "admissible".
-
 -   for each $v \in V$ do initialize it
-
     -   if $v \neq s$ then
-
         -   $g(v) \leftarrow \infty$ explanation: $g(v)$ is the actual
             length of the shortest known path from $s$ to $v$.
-
         -   $f(v) \leftarrow \infty$ explanation: $f(v)$ is the
             estimation of the length of the shortest path from $s$
             *through* $v$ to $x$. In other words, $f(v)=g(v)+h(v,x)$.
-
     -   else
-
         -   $g(v) \leftarrow 0$ see comments above for what $g(v)$
             represents
-
         -   $f(v) \leftarrow h(s,x)$ see comments above for what $f(v)$
             represents
-
     -   $\mathrm{prev}(v) \leftarrow \mathrm{undefined}$, this is our
         easy way of tracking edges on the current known-to-be-shortest
         path, each vertex along this path has a reverse pointer to the
         vertex before it, back to vertex $s$.
-
 -   Let $O \leftarrow \\{s\\}$, start with the start vertex, this is very
     different from Dijkstra's algorithm that starts with all the
     destination vertices. However, $O$ is still the frontier set that
     represents vertices that have recently been updated and are
     candidates to be on the shortest path from $s$ to $x$.
-
 -   while $\exists v \in O(f(v) < g(x))$ do, this basically says "if
     there are candidates on the shortest path, let us explore them"
-
     -   Let $c \in O$ such that $\forall w \in O(f(c) \le f(w))$, this
         picks up the "most promising" candidates from $O$.
-
     -   $O \leftarrow O - \\{c\\}$, remove it so it is not going to be
         reconsidered endlessly.
-
     -   for each neighbor $n \in V$ such that $(c, n) \in E$ do
-
         -   $t \leftarrow g(c)+d((c,n))$ this is the actual length of
             the shortest known path from $s$ through $c$ to $n$
-
         -   if $t < g(n)$ then, we have found a shorter path to get to
             $n$, so $n$ should be considered as a candidate on the
             shortest path now
-
             -   $O \leftarrow O \cup \\{n\\}$
-
             -   $\mathrm{prev}(n) \leftarrow c$
-
             -   $g(n) \leftarrow t$ update length of known shortest path
                 from $s$ to $n$
-
             -   $f(n) \leftarrow g(n)+h(n,x)$ update estimated length of
                 shortest path from $s$ through $n$ to $x$
-
 -   define $G\_{s,x}=(V,E\_{s,x})$ such that
     $\forall w \in V(\mathrm{prev}(w)=v \Leftrightarrow (v,w) \in E\_{s,x})$,
     this is an alternative way to create the solution graph. The good
