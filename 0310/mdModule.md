@@ -37,9 +37,9 @@ $\forall i \in \mathbb{N}(i \le \|p\|-2 \Rightarrow (p[i],p[i+1]) \in E)$
 
 Furthermore, a path cannot contain duplicates of a vertex.
 
-In many graphs, a distance function $d:E \rightarrow \mathbb{R}^*$ maps
+In many graphs, a distance function $d: E \rightarrow \mathbb{R}^\*$ maps
 edges of a graph to real number values. In most cases, the distance of
-an edge cannot be negative, hence the use of $\mathbb{R}^*$ to denote
+an edge cannot be negative, hence the use of $\mathbb{R}^\*$ to denote
 non-negative real numbers.
 
 # Dijkstra's algorithm
@@ -214,6 +214,8 @@ following presents the pseudocode of the A\* algorithm:
     actually equivalent.
 
 # Graph Examples
+
+## For Dijkstra's algorithm
 ```mermaid
 flowchart LR
 a(a)
