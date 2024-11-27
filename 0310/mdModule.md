@@ -65,38 +65,27 @@ the pseudocode:
     a just updated length to a destination
 
 -   $E' \leftarrow \\{\\}$, this is the set of solution edges
-
 -   while $Q \neq \\{\\}$ do
-
     -   select $v \in Q$ such that $\forall w \in Q(L(v) \le L(w))$, $v$
         has the shortest length to a destination of all the boundary
         vertices, it looks the most promising
-
     -   $Q \leftarrow Q - \\{v\\}$ because we are now expanding the
         boundary using $v$
-
     -   for each $e \in \\{(w,v)\|(w,v) \in E\\}$ do:
-
         -   assume $e = (w,v)$
-
         -   if $L(v)+d(e) < L(w)$ then:
-
             -   $L(w) \leftarrow L(v)+d(e)$
-
             -   for each $(w,u) \in E'$ do:
                 $E' \leftarrow E' - \\{(w,u)\\}$ because we just found a
                 shorter path from vertex $w$ to a destination
-
             -   $E' \leftarrow E' \cup \\{(w,v)\\}$ to remember the new
                 edge leading from $w$ to a destination that has the
                 shortest path
-
             -   $Q \leftarrow Q \cup \\{w\\}$ because vertex $w$ is
                 updated, there it is (perhaps again) on the boundary of
                 vertices just updated with a shortest length to a
                 destination, this triggers the (re)evaluation of
                 vertices connected to $w$ by edges
-
 -   define solution graph $G' = (V, E')$
 
 # The A\* Algorithm
