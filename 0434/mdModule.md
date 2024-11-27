@@ -39,7 +39,7 @@ Note that if a placeholder if x or y, the actual operand must be one of the four
 |joi i|PC=o?i:PC+1||2|jump to location i if and only if o is true|
 |jli i|PC=l?i:PC+1||2|jump to location i if and only if l is true|
 |jmp x|PC=x||1|jump to where x points to|
-|cmp x,y|x-y|C,Z,S,O,L|1|compare x to y|
+|cmp x,y|x-y|C,Z,S,O,L|1|compare x to y, x and y cannot be the same register|
 |add x,y|x=x+y|C,Z,S,O,L|1|add y to x|
 |sub x,y|x=x-y|C,Z,S,O,L|1|subtract y from x|
 |and x,y|x=x&y|Z,S,L|1|store the bitwise-and of x and y to x|
