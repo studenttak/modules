@@ -48,7 +48,7 @@ Dijkstra's algorithm finds the shortest path from all vertices in a
 graph to a particular set of "destination" vertices. The following is
 the pseudocode:
 
--   let the graph be $G=(V,E)$, and $d:E \rightarrow \mathbb{R}^*$ be a
+-   let the graph be $G=(V,E)$, and $d:E \rightarrow \mathbb{R}^\*$ be a
     distance function of all edges
 -   let $S \subseteq V$ be a subset of vertices identified as
     destinations
@@ -90,15 +90,15 @@ algorithm. It differs from Dijkstra's algorithm in that the A\*
 algorithm utilizes a "heuristic" function to guide the search for the
 shortest path. A heuristic function for a graph $G=(V,E)$ is often in
 the form of $h:(V\times V)\rightarrow
-  \mathbb{R}^*$. It is a quick-to-compute function that estimates the
+  \mathbb{R}^\*$. It is a quick-to-compute function that estimates the
 actual shortest distance between two vertices. Because the A\* algorithm
 only has one destination $x$, the heuristic function only needs to be
-$h:(V \times \\{x\\}) \rightarrow \mathbb{R}^*$ because there is no need
+$h:(V \times \\{x\\}) \rightarrow \mathbb{R}^\*$ because there is no need
 to know the heuristic between a vertex and any non-destination vertex.
 
 In order for the A\* algorithm to function, the heuristic function has
 to be admissible. This means that if
-$L:(V \times V)\rightarrow \mathbb{R}^*$ represents the actual length of
+$L:(V \times V)\rightarrow \mathbb{R}^\*$ represents the actual length of
 the shortest path between two vertices, then
 $\forall v,w\in V(h(v,w) \leq L(v,w))$. In short, the heuristic function
 must be an *underestimate* of the actual length of the shortest path.
@@ -113,7 +113,7 @@ vertices, The A\* algorithm explores "forward" from a start vertex. The
 following presents the pseudocode of the A\* algorithm:
 
 -   Let the graph in question be $G=(V,E)$
--   Let the distance function be $d:E \rightarrow \mathbb{R}^*$, this
+-   Let the distance function be $d:E \rightarrow \mathbb{R}^\*$, this
     functions maps each edge to a non-negative real number as the
     distance
 -   Let $s \in V$ be a start vertex, unlike Dijkstra's algorithm, A\*
@@ -123,7 +123,7 @@ following presents the pseudocode of the A\* algorithm:
     to create the illusion of multiple destination vertices by zero
     distance edges from real destination vertices to a single "virtual"
     destination.
--   Let $h:(V \times V) \rightarrow \mathbb{R}^*$ be a heuristic
+-   Let $h:(V \times V) \rightarrow \mathbb{R}^\*$ be a heuristic
     function where $h(v,w)$ is an underestimate of the cost of the
     shortest path from $v$ to $w$. Due to the under estimating nature,
     such a heuristic is also called "admissible".
