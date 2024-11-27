@@ -26,7 +26,7 @@ The following instruction table uses `x` and `y` as placeholders of one of the f
 
 |mnemonics|RTL|flags affected|number of bytes of the instruction|description|
 |-|-|-|-|-|
-|cpr x,y|x=y||1|compare x to y|
+|cpr x,y|x=y||1|copy y to x|
 |ld x,(y)|x = *y||1|load x from where y points to |
 |st (y),x|*y = x||1|store x to where y points to|
 |ldi x,i|x=i||2|load immediate to x|
