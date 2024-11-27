@@ -49,6 +49,8 @@ The following instruction table uses `x` and `y` as placeholders of one of the f
 |nop|||1|no operation|
 |halt|||1|halt, execution cannot proceed any further|
 
+The use of parentheses is neither optional nor arbitrary. A pair of parentheses should be used only in an "indirect" operand. The value of an indirect operand is the location or RAM pointed to by a specific register. Only the second operand of `ld` and the first operand of `st` are indirect operands.
+
 The `byte` directive is used to reserve and initialize the value of a byte:
 
 ```
