@@ -24,6 +24,8 @@ The flags are utilized in the conditional branch instructions jci, jzi, jsi, joi
 
 The following instruction table uses `x` and `y` as placeholders of one of the four registers, A, B, C, and D. `i` is a placeholder for an immediate value, which must be specified by a postfix expression that is resolvable at assemble time. The register transfer language (RTL) description explains what happens when the instruction executes. Note that `PC` already points to one byte past the opcode being executed due to an autoincrement in the fetch phase of instruction execution.
 
+Note that if a placeholder if x or y, the actual operand must be one of the four registers. For example, `add a,b` is valid, but `add a,1` is invalid.
+
 |mnemonics|RTL|flags affected|number of bytes of the instruction|description|
 |-|-|-|-|-|
 |cpr x,y|x=y||1|copy y to x|
