@@ -57,3 +57,4 @@
 * [Module 0432: A general description of TTP](./0432/mdModule.md)
 * [Module 0433: Creative Commons, Open Educational Resources, and GitHub](./0433/mdModule.md)
 * [Module 0241: Some module](./0433/mdModule.md)
+* [Module 0434: TTP programming](./0434/mdModule.md)
