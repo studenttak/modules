@@ -113,6 +113,53 @@ f:
   jmp b    // continue execution at the caller
 ```
 
+A function may have zero (no) local variables. In this scenario, the approach to use `func_lvs` as a label to represent the number of bytes used by local variable is still correct, but the label should be defined as zero.
+
+For example, let us consider the following C function definition:
+
+```c
+void g(uint8_t *x, uint_8 y)
+{
+  *x = y;
+}
+```
+
+There are no local variables, the call frame consists only of the return address and the two parameters as follows:
+
+|item|offset from the frame base|
+|-|-|
+|y|2|
+|x|1|
+|return address|0|
+
+The corresponding TTPASM code can be as follows:
+
+```ttpasm
+g:
+  g_lvs: 0
+  g_x: g_lvs 1 + // add 1 to skip over the return address
+  g_y: g_x 1 +
+  ldi b,g_lvs
+  sub d,b // "allocate" local variables even though there is none
+
+  ldi b,g_y
+  add b,d
+  ld  b,(b)
+
+  ldi a,g_x
+  add a,d
+  ld  a,(a)
+
+  st  (a),b
+
+  ldi b,g_lvs
+  add d,b // "deallocate" local variables even though there is none
+
+  ld  b,(d)
+  inc d
+  jmp b
+```
+
 ## Non-caller-callee specific
 
 * Any content below where the stack pointer points can be modified asynchronously
