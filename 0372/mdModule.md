@@ -22,6 +22,8 @@ dec d
 st  (d),x // x is a placeholder for register a,b,c, or d
 ```
 
+In both the C and TTPASM implementations, it is clear that the stack pointer always points to the last item pushed on the stack. This is because the stack pointer is adjusted *prior* to overwriting the location that the stack pointer points to. In terms of notation, we can use `D+0` to refer to the address that is currently pointed to by the stack pointer.
+
 To pop the "top" of the stack to register X, the operation is reversed. The following is the C code implementation:
 
 ```c
@@ -138,17 +140,17 @@ For example, let us consider the following C function definition:
 ```c
 void g(uint8_t *x, uint_8 y)
 {
-  *x = y;
+  *x = y
 }
 ```
 
 There are no local variables, the call frame consists only of the return address and the two parameters as follows:
 
-|item|offset from the frame base|
+|location|description of item|
 |-|-|
-|y|2|
-|x|1|
-|return address|0|
+|D+2|parameter `y`|
+|D+1|parameter `x`|
+|D+0|return address|
 
 The corresponding TTPASM code can be as follows:
 
