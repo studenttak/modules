@@ -72,6 +72,7 @@ The mutual agreement between the caller and callee starts with how the stack ope
 
 Assuming $\mathtt{arg}\_1$ to $\mathtt{arg}\_n$ refer to $n$ arguments (each with a width of one byte) in a call to function `func`, the frame is partially constructed by the caller at this point:
 
+|location|content|
 |-|-|
 |D+n|$\mathtt{arg}\_n$|
 |D+n-1|$\mathtt{arg}\_{n-1}$|
@@ -82,6 +83,7 @@ Assuming $\mathtt{arg}\_1$ to $\mathtt{arg}\_n$ refer to $n$ arguments (each wit
 
 In our example, the stack should like the following at the instruction right after the `jmpi func` instruction:
 
+|location|content|
 |-|-|
 |D+n-1|$\mathtt{arg}\_n$|
 |D+n-2|$\mathtt{arg}\_{n-1}$|
@@ -108,6 +110,7 @@ In our example, the stack should like the following at the instruction right aft
 
 In the ongoing example, if we assume function `func` has local variables $\mathtt{var}\_1$ to $\mathtt{var}\_m$, each being one byte wide, then the stack looks like the following after the entry code of the callee moves the stack pointer and allocate space for the local variables:
 
+|location|content|
 |-|-|
 |D+n+m+1|$\mathtt{arg}\_n$|
 |D+n+m|$\mathtt{arg}\_{n-1}$|
