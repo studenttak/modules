@@ -133,6 +133,20 @@ f:
   jmp b    // continue execution at the caller
 ```
 
+Because the callee is responsible to pop the return address, the stack looks like the following immediately after it returns to the caller:
+
+|location|item description|
+|-|-|
+|D+1|parameter `y`|
+|D+0|parameter `x`|
+
+Note how the return address is not on the stack. However, parameters `x` and `y` (known as arguments from the caller's perspective) are still on the stack. As per the agreement, the caller needs to deallocate these two bytes on the stack. For this example, the following TTPASM code that immediately follows `jmpi f` in the call deallocates the arguments:
+
+```ttpasm
+  inc d // deallocate parameter x
+  inc d // deallocate parameter y
+```
+
 A function may have zero (no) local variables. In this scenario, the approach to use `func_lvs` as a label to represent the number of bytes used by local variable is still correct, but the label should be defined as zero. It is important to note that the return address is pointed to by the stack pointer in this case.
 
 For example, let us consider the following C function definition:
