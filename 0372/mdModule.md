@@ -196,4 +196,29 @@ g:
 
 ## Non-caller-callee specific
 
-* Any content below where the stack pointer points can be modified asynchronously
+* Any content below where the stack pointer points can be modified asynchronously.
+
+In an architecture that supports interrupts, hardware interrupt can occur between the execution of any two instructions. A hardware interrupt invokes (calls) the corresponding ISR (interrupt service routine). This causes the return address to the interrupted code to be pushed on the stack. Imagine the stack as follows prior to an interrupt:
+
+|location|item description|
+|-|-|
+|D+0|last item pushed|
+|D-1|remnant X|
+
+When an interrupt occurs, the processor pushes the return address from the ISR to the interrupted code on the stack, resulting in the following state:
+
+|location|item description|
+|-|-|
+|D+1|last item pushed|
+|D+0|~~remnant X~~ return address to interrupted code|
+
+Note how "last item pushed" is not affected because it was where the stack pointer points to when the interrupt occurs. However, "remnant X" is now overwritten by the return address to resume the execution of code prior to the interrupt.
+
+After the ISR returns, the stack can be described as follows:
+
+|location|item description|
+|-|-|
+|D+0|last item pushed|
+|D-1|~~remnant X~~ return address to interrupted code|
+
+From the perspective of the code that was interrupted, the state of the stack has not changed, as long as there is no reference to locations below where the stack pointer points! Note that during the execution of an ISR, more locations on the stack may be overwritten. In other words, the overwriting of the location immediately below where the stack pointer points to at the moment of the interrupt is the *minimum* part of the stack to be used during the execution of an ISR.
