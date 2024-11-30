@@ -69,7 +69,25 @@ The mutual agreement between the caller and callee starts with how the stack ope
   * as a result, the return address has an address that is lower than the arguments
   * the stack pointer points to the return address at the entry point of the function being called
 * jump to the entry point of the callee
-* the callee should return to the instruction right after the jump instruction
+
+Assuming $\mathtt{arg}\_1$ to $\mathtt{arg}\_n$ refer to $n$ arguments (each with a width of one byte) in a call to function `func`, the frame is partially constructed by the caller at this point:
+
+|-|-|
+|D+n|$\mathtt{arg}\_n$|
+|D+n-1|$\mathtt{arg}\_{n-1}$|
+|D+1|$\mathtt{arg}\_{1}$|
+|D+0|return address to the instruction immediately after `jmpi func`|
+
+* the callee should return to the instruction right after the jump instruction with the return address popped
+
+In our example, the stack should like the following at the instruction right after the `jmpi func` instruction:
+
+|-|-|
+|D+n-1|$\mathtt{arg}\_n$|
+|D+n-2|$\mathtt{arg}\_{n-1}$|
+|...|...|
+|D+0|$\mathtt{arg}\_{1}$|
+
 * if the callee returns a scalar value:
   * the return value is assumed to be in register A
 * the value of registers A, B and C are not assumed preserved
@@ -85,12 +103,30 @@ The mutual agreement between the caller and callee starts with how the stack ope
     * the last parameter has the highest address
     * parameters are contiguous in TTP
 * in the callee's code:
-  * additional stack space may be utilized
-  * there is no need to preserve the values of registers A, B, or C
+  * additional stack space may be utilized for local variables
+  * the callee is responsible for moving the stack pointer lower to reserve space for the local variables
+
+In the ongoing example, if we assume function `func` has local variables $\mathtt{var}\_1$ to $\mathtt{var}\_m$, each being one byte wide, then the stack looks like the following after the entry code of the callee moves the stack pointer and allocate space for the local variables:
+
+|-|-|
+|D+n+m+1|$\mathtt{arg}\_n$|
+|D+n+m|$\mathtt{arg}\_{n-1}$|
+|...|...|
+|D+1+m|$\mathtt{arg}\_{1}$|
+|D+m|return address|
+|D+m-1|$\mathtt{var}\_m$|
+|...|...|
+|D+0|$\mathtt{var}\_1$|
+
+Note that local variables are not restricted to one byte wide. Arrays and structures, for example, will be more than one byte wide.
+
+To continue with additional agreements between the caller and callee:
+
+* there is no need to preserve the values of registers A, B, or C
 * at the exit point of the callee:
   * if the callee has a scalar return value:
     * use register A to store the return value
-  * the callee is responsible to pop the return address
+  * the callee is responsible for popping the return address
   * the callee uses the popped return address to return to the caller
  
 ## The call frame
