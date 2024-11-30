@@ -37,10 +37,23 @@ ld  x,(d) // x is a placeholder for register a,b,c, or d
 inc d
 ```
 
-Because of this stack convention, items that are pushed earlier occupy memory locations that are higher in addresses.
+Because of this stack convention, items that are pushed earlier occupy memory locations that are higher in addresses. For example, the result of push 2 can be describe by the following:
+
+|location|content|
+|-|-|
+|D+0|2|
+
+However, if push 13 follows immediately, then stack becomes as follows:
+
+|location|content|
+|-|-|
+|D+1|2|
+|D+0|13|
 
 
 # Mutual agreement
+
+The mutual agreement between the caller and callee starts with how the stack operates, as describe in the previous section. 
 
 ## Caller side
 
@@ -77,6 +90,8 @@ Because of this stack convention, items that are pushed earlier occupy memory lo
   * the callee uses the popped return address to return to the caller
  
 ## The call frame
+
+### When there are local variables
 
 The call frame (or just "frame") refers to a region of stack space that provides the data context for a function to operate. This includes the space of local variables, the return address, and the parameters. The call frame is not allocated by the callee. Instead, it is partially constructed by the caller, including the parameters and the return address, and partially constructed by the callee, allocating the additional space for local variables.
 
@@ -146,8 +161,9 @@ Note how the return address is not on the stack. However, parameters `x` and `y`
   inc d // deallocate parameter x
   inc d // deallocate parameter y
 ```
+### When there are no local variables
 
-A function may have zero (no) local variables. In this scenario, the approach to use `func_lvs` as a label to represent the number of bytes used by local variable is still correct, but the label should be defined as zero. It is important to note that the return address is pointed to by the stack pointer in this case.
+A function may have zero (no) local variables. In this scenario, the approach to use `func_lvs` as a label to represent the number of bytes used by local variables is still correct, but the label should be defined as zero. It is important to note that the return address is pointed to by the stack pointer in this case.
 
 For example, let us consider the following C function definition:
 
@@ -158,7 +174,7 @@ void g(uint8_t *x, uint_8 y)
 }
 ```
 
-There are no local variables, the call frame consists only of the return address and the two parameters as follows:
+There are no local variables, the call frame consists only of the return address and the two parameters as follows at the entry point of function `g`:
 
 |location|description of item|
 |-|-|
