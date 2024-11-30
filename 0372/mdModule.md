@@ -4,6 +4,40 @@ author: Tak Auyeung
 ---
 # _{{ page.title }}_
 
+# Stack operation specification
+
+Register D is the designated stack point. Although register D is a general-purpose register, it is designated by *convention* in order to specify the agreement between the caller and the callee.
+
+To push the value already loaded into register X (X can be A, B, C, or D), the following C code is used
+
+```c
+// to push the value of register X
+*(--D) = X;
+```
+
+The stack pointer is decremented first to reserve the space, then the content of register X is copied to the location pointed to by register D. The equivalent TTPASM code is as follows:
+
+```ttpasm
+dec d
+st  (d),x // x is a placeholder for register a,b,c, or d
+```
+
+To pop the "top" of the stack to register X, the operation is reversed. The following is the C code implementation:
+
+```c
+X = *(D++);
+```
+
+The content pointed to by the stack pointer is copied to the register specified by X, then the stack pointer is incremented to deallocate the location where the content was retrieved from. The following is the TTPASM code:
+
+```ttpasm
+ld  x,(d) // x is a placeholder for register a,b,c, or d
+inc d
+```
+
+Because of this stack convention, items that are pushed earlier occupy memory locations that are higher in addresses.
+
+
 # Mutual agreement
 
 ## Caller side
