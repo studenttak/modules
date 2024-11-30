@@ -43,12 +43,16 @@ Because of this stack convention, items that are pushed earlier occupy memory lo
 |-|-|
 |D+0|2|
 
+In this notation `D+0` refers to the location that is pointed to by the stack pointer, `D`. The `+0` indicates an offset of zero. 
+
 However, if push 13 follows immediately, then stack becomes as follows:
 
 |location|content|
 |-|-|
 |D+1|2|
 |D+0|13|
+
+In this table, the notation `D+1` references the address that is one byte higher than where the stack pointer (D) points to. Not that at this point, the stack pointer is decremented in the process to push 13. As a result, the location that stores the value of 2 has not changed, but its offset from where the stack pointer points to is changed because the stack pointer has changed.
 
 
 # Mutual agreement
@@ -105,7 +109,7 @@ void f(uint8_t x, uint8_t y)
 }
 ```
 
-In this case, the caller is responsible to push the arguments and the return address. As a result, the following table describes the frame at the entry point of function `f`:
+In this case, the caller is responsible to push the arguments and the return address. As a result, the following table describes the *partially constructed* frame at the entry point of function `f`:
 
 |location|item description|
 |-|-|
@@ -113,7 +117,7 @@ In this case, the caller is responsible to push the arguments and the return add
 |D+1|parameter `x`|
 |D+0|return address|
 
-Note how local variables `a` and `b` are not yet allocated. Function `f` is responsible to allocate the space needed for the local variables. Because `a` and `b` are both 1-byte wide, they need a total of 2 bytes in the frame. These two bytes are allocated at the entry point of function `f`. As a result, the local variables are located lower (in terms of addresses) than the return address. The following table show the content of the frame after local variables are allocated:
+Note how local variables `a` and `b` are not yet allocated. Function `f` is responsible for allocating the space needed for the local variables. Because `a` and `b` are both 1-byte wide, they need a total of 2 bytes in the frame. These two bytes are allocated at the entry point of function `f`. As a result, the local variables are located lower (in terms of addresses) than the return address. The following table show the content of the frame after local variables are explicitly allocated by the entry code of function `f`:
 
 |location|item description|
 |-|-|
@@ -148,7 +152,7 @@ f:
   jmp b    // continue execution at the caller
 ```
 
-Because the callee is responsible to pop the return address, the stack looks like the following immediately after it returns to the caller:
+Because the callee is responsible for popping the return address, the stack looks like the following immediately after it returns to the caller:
 
 |location|item description|
 |-|-|
