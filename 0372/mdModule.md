@@ -76,7 +76,7 @@ Assuming $\mathtt{arg}\_1$ to $\mathtt{arg}\_n$ refer to $n$ arguments (each wit
 |D+n|$\mathtt{arg}\_n$|
 |D+n-1|$\mathtt{arg}\_{n-1}$|
 |D+1|$\mathtt{arg}\_{1}$|
-|D+0|return address to the instruction immediately after `jmpi func`|
+|D+0|return address to the instruction immediately after `jmpi func|
 
 * the callee should return to the instruction right after the jump instruction with the return address popped
 
