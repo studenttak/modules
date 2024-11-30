@@ -26,6 +26,12 @@ The following instruction table uses `x` and `y` as placeholders of one of the f
 
 Note that if a placeholder if x or y, the actual operand must be one of the four registers. For example, `add a,b` is valid, but `add a,1` is invalid.
 
+Addressing modes in the instruction mnemonics:
+
+* `x` or `y`: register, the operand is the value of the specified register, `x` and `y` are placeholders of registers `a`, `b`, `c`, or `d`.
+* `i`: immediate, the operand is the value of a postfix expression, the value must be resolved at assemble time
+* `(y`)`: indirect, the operand is the content in RAM at the location pointed to by the register that `y` specifies.
+
 |mnemonics|RTL|flags affected|number of bytes of the instruction|description|
 |-|-|-|-|-|
 |cpr x,y|x=y||1|copy y to x|
