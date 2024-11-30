@@ -30,7 +30,7 @@ Addressing modes in the instruction mnemonics:
 
 * `x` or `y`: register, the operand is the value of the specified register, `x` and `y` are placeholders of registers `a`, `b`, `c`, or `d`.
 * `i`: immediate, the operand is the value of a postfix expression, the value must be resolved at assemble time
-* `(y`)`: indirect, the operand is the content in RAM at the location pointed to by the register that `y` specifies.
+* `(y)`: indirect, the operand is the content in RAM at the location pointed to by the register that `y` specifies.
 
 |mnemonics|RTL|flags affected|number of bytes of the instruction|description|
 |-|-|-|-|-|
