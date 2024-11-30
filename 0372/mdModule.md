@@ -88,6 +88,24 @@ void f(uint8_t x, uint8_t y)
 }
 ```
 
+In this case, the caller is responsible to push the arguments and the return address. As a result, the following table describes the frame at the entry point of function `f`:
+
+|location|item description|
+|-|-|
+|D+2|parameter `y`|
+|D+1|parameter `x`|
+|D+0|return address|
+
+Note how local variables `a` and `b` are not yet allocated. Function `f` is responsible to allocate the space needed for the local variables. Because `a` and `b` are both 1-byte wide, they need a total of 2 bytes in the frame. These two bytes are allocated at the entry point of function `f`. As a result, the local variables are located lower (in terms of addresses) than the return address. The following table show the content of the frame after local variables are allocated:
+
+|location|item description|
+|-|-|
+|D+4|parameter `y`|
+|D+3|parameter `x`|
+|D+2|return address|
+|D+1|local variable `b`|
+|D+0|local variable `a`|
+
 The offset to items of the frame may be defined as follows:
 
 ```ttpasm
