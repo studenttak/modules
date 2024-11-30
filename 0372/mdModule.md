@@ -113,7 +113,7 @@ f:
   jmp b    // continue execution at the caller
 ```
 
-A function may have zero (no) local variables. In this scenario, the approach to use `func_lvs` as a label to represent the number of bytes used by local variable is still correct, but the label should be defined as zero.
+A function may have zero (no) local variables. In this scenario, the approach to use `func_lvs` as a label to represent the number of bytes used by local variable is still correct, but the label should be defined as zero. It is important to note that the return address is pointed to by the stack pointer in this case.
 
 For example, let us consider the following C function definition:
 
