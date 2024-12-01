@@ -105,7 +105,7 @@ The repository comes with its own OER content that you probably do not need. To 
 * To (dangerously!) remove all modules:
   * First, consider backing up all the files by downloading the repo as a ZIP file!
   * Click "Actions" on the horizontal menu bar.
-  * On the left pane, under "Actions", "All workflows", click `rmModules` (__r__e__m__ove __modules__).
+  * On the left pane, under "Actions", "All workflows", click `rmModules` (remove Modules).
   * Make sure this is what you want to do!
   * On the right pane, click "Run workflow".
   * Click "Run workflow" in the pop-up.
@@ -145,3 +145,20 @@ Then type the actual content in this document. Remember to to click "Commit chan
 If you remove all the modules that came with the repository, you can choose your own content license. To change your content license, modify `_layouts/default.html`. Specifically, locate the line that starts with "This site is licensed under..", then modify the URL to the Creative Commons license and update the symbols.
 
 Note that the licensing of the content is independent of the licensing of the HTML and YAML files that form the framework of the publication mechanism.
+
+## Learners
+
+`GitHub` has mechanisms that benefit learners. Each repository has mechanisms for people to report "issues" as well as to participate in "discussions." Learners or OER collaborators can make use of these two features to officially report problems or to engage in discussions.
+
+However, the feature that has the most potential is the ability to "fork" a repository. Anyone with a `GitHub` account can click on the link "Improve this page by contributing and editing." (at the bottom of this page). `GitHub` then prompts whether the user wants to fork the repository.
+
+A fork is a spinoff, but it is not a clone. A clone is, by default, independent from the source. This means changes of the origin cannot reach a clone, and changes to a clone cannot reach the origin. However, a fork allows revisions to flow in both directions.
+
+For this discussion, it is helpful to introduce the concept of a "branch." Every repository starts with a `main` branch. A branch is a sequence of tracked revisions. The addition of a file is a revision, the editing of a file is a revision, etc. `Fust` publishes only the `main` branch of a repository.
+
+A fork is, as the name implies, a split-off point of a branch. Let us name a forked branch "T" from the `main` branch. After the fork, branch "T" can track its own sequence of revisions, independent to the revisions to the `main` branch. This mechanism is helpful in several use cases:
+
+* A major revision that takes a significant amount of time. During the revision, the `main` branch remains to be the one published. This way, learners do not get affected by the partial updates that may render a document unsuitable for publication.
+* A learner may fork a repository for interleaving notes in the source material. This is, in a way, equivalent to making a photocopy of an entire book to mark up the photocopy without affecting what other learners see in the published version.
+
+
