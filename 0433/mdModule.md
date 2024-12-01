@@ -28,9 +28,15 @@ While there are many other platforms to author, publish, and adopt OER, `GitHub`
 
 "Pull" is a feature unique to `git`, by extension, `GitHub`.
 
+### Putting everything together
+
+For the purposes of this work, the `GitHub` repository that publishes this work is called Fust (pronounced fOOst), in honor of the financier who did not invent the printing press, but financed Gutenberg (the inventor) and later operated the first printing firm.
+
 ## Licensing
 
 The strength of `GitHub` is the ease of spinning off an OER project. As such, while `GitHub` is also useful for OERs that have ND in their CC licenses, OERs that are CC licensed without ND benefit even more from the `git` mechanisms.
+
+For `GitHub` to publish content, some customization is needed. Such customization has coding involved and is therefore licensed separately. In other words, any OER developer who chooses to use Fust can specify different licenses for the *content* while maintaining the licensing of Fust.
 
 ## On the technical side
 
@@ -39,7 +45,7 @@ The strength of `GitHub` is the ease of spinning off an OER project. As such, wh
 However, the *implementation* of MD rendering at `GitHub` has many inconsistencies and issues. Many of these inconsistencies are discovered and managed in the OER project that hosts this page. The architecture of this OER project is as follows:
 
 * The content is hosted by `github.com`. All the MD and associated graphics files are parts of a `GitHub` repository.
-* Content is organized as "modules." Each module has its own folder to contain the MD file and potentially additional media files that the MD file references.
+* Content is organized as "modules." Each module has its folder to contain the MD file and potentially additional media files that the MD file references.
 * The content is processed and published by `github.io`. There is a delay in the update of the source material and the actual publication of the content. This lag depends on many factors, including the amount of content in a project.
 
 While `GitHub` can natively do this, this OER project includes the configuration and customization necessary to render MD as correctly as possible. Please note that the "preview" of the editor does not render some MD code correctly, especially those involving equations, diagrams (using `Mermade`), and HTML/Javascript for rendering purposes.
@@ -49,7 +55,7 @@ For content quality assurance, the following steps are suggested. Assume `userna
 * Go to `https://github.com/username/reponame/actions` and check to make sure all workflow runs are completed, each with a check in a green circle. If a workflow is in progress (a turning yellow circle), wait for it to complete.
 * Go to `https://username.github.io/reponame/moduleNum/mdModule.html` to check the content.
 
-In order to circumvent issues related to static and out-of-date Markdown rendering, the configuration of this repository relies on many client-side (browser side) Javascript rendering.
+In order to circumvent issues related to static and out-of-date Markdown rendering, the configuration of this repository relies on client-side (browser side) Javascript rendering.
 
 ## Getting started
 
