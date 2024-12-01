@@ -1,5 +1,5 @@
 ---
-title: "Module 0433: Creative Commons, Open Educational Resources, and GitHub"
+title: "Module 0433: Fust: a framework to integrate Creative Commons, Open Educational Resources, and GitHub"
 ---
 
 # _{{ page.title }}_
@@ -105,7 +105,7 @@ The repository comes with its own OER content that you probably do not need. To 
 * To (dangerously!) remove all modules:
   * First, consider backing up all the files by downloading the repo as a ZIP file!
   * Click "Actions" on the horizontal menu bar.
-  * On the left pane, under "Actions", "All workflows", click `rmModules`.
+  * On the left pane, under "Actions", "All workflows", click `rmModules` (__r__e__m__ove __modules__).
   * Make sure this is what you want to do!
   * On the right pane, click "Run workflow".
   * Click "Run workflow" in the pop-up.
