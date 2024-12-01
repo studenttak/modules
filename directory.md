@@ -55,7 +55,7 @@
 * [Module 0430: Study/Learning Skill Builder](./0430/mdModule.md)
 * [Module 0431: Creative Commons in OER](./0431/mdModule.md)
 * [Module 0432: A general description of TTP](./0432/mdModule.md)
-* [Module 0433: Creative Commons, Open Educational Resources, and GitHub](./0433/mdModule.md)
+* [Module 0433: Fust: a framework to integrate Creative Commons, Open Educational Resources, and GitHub](./0433/mdModule.md)
 * [Module 0241: Some module](./0433/mdModule.md)
 * [Module 0434: TTP programming](./0434/mdModule.md)
 * [Module 0435: Custom GPT instructions](./0435/mdModule.md)
