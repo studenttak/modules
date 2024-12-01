@@ -30,7 +30,7 @@ While there are many other platforms to author, publish, and adopt OER, `GitHub`
 
 ### Putting everything together
 
-For the purposes of this work, the `GitHub` repository that publishes this work is called Fust (pronounced fOOst), in honor of the financier who did not invent the printing press, but financed Gutenberg (the inventor) and later operated the first printing firm.
+For the purposes of this work, the `GitHub` repository that publishes this work is called Fust (pronounced fOOst), in honor of the financier who did not invent the printing press, but financed Gutenberg (the inventor) and later operated the first printing firm. Fust is recognized for his contribution in the Renaissance. 
 
 ## Licensing
 
