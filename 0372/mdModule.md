@@ -47,10 +47,10 @@ In this notation `D+0` refers to the location that is pointed to by the stack po
 
 However, if push 13 follows immediately, then stack becomes as follows:
 
-|location|content|
+|Offset from where D points to|content|
 |-|-|
-|D+1|2|
-|D+0|13|
+|+1|2|
+|+0|13|
 
 In this table, the notation `D+1` references the address that is one byte higher than where the stack pointer (D) points to. Not that at this point, the stack pointer is decremented in the process to push 13. As a result, the location that stores the value of 2 has not changed, but its offset from where the stack pointer points to is changed because the stack pointer has changed.
 
@@ -72,23 +72,23 @@ The mutual agreement between the caller and callee starts with how the stack ope
 
 Assuming $\mathtt{arg}\_1$ to $\mathtt{arg}\_n$ refer to $n$ arguments (each with a width of one byte) in a call to function `func`, the frame is partially constructed by the caller at this point:
 
-|location|content|
+|Offset from where D points to|content|
 |-|-|
-|D+n|$\mathtt{arg}\_n$|
-|D+n-1|$\mathtt{arg}\_{n-1}$|
-|D+1|$\mathtt{arg}\_{1}$|
-|D+0|return address to the instruction immediately after `jmpi func|
+|+n|$\mathtt{arg}\_n$|
+|+n-1|$\mathtt{arg}\_{n-1}$|
+|+1|$\mathtt{arg}\_{1}$|
+|+0|return address to the instruction immediately after `jmpi func|
 
 * the callee should return to the instruction right after the jump instruction with the return address popped
 
 In our example, the stack should like the following at the instruction right after the `jmpi func` instruction:
 
-|location|content|
+|Offset from where D points to|content|
 |-|-|
-|D+n-1|$\mathtt{arg}\_n$|
-|D+n-2|$\mathtt{arg}\_{n-1}$|
+|+n-1|$\mathtt{arg}\_n$|
+|+n-2|$\mathtt{arg}\_{n-1}$|
 |...|...|
-|D+0|$\mathtt{arg}\_{1}$|
+|+0|$\mathtt{arg}\_{1}$|
 
 * if the callee returns a scalar value:
   * the return value is assumed to be in register A
@@ -110,16 +110,16 @@ In our example, the stack should like the following at the instruction right aft
 
 In the ongoing example, if we assume function `func` has local variables $\mathtt{var}\_1$ to $\mathtt{var}\_m$, each being one byte wide, then the stack looks like the following after the entry code of the callee moves the stack pointer and allocate space for the local variables:
 
-|location|content|
+|Offset from where D points to|content|
 |-|-|
-|D+n+m+1|$\mathtt{arg}\_n$|
-|D+n+m|$\mathtt{arg}\_{n-1}$|
+|+n+m+1|$\mathtt{arg}\_n$|
+|+n+m|$\mathtt{arg}\_{n-1}$|
 |...|...|
-|D+1+m|$\mathtt{arg}\_{1}$|
-|D+m|return address|
-|D+m-1|$\mathtt{var}\_m$|
+|+1+m|$\mathtt{arg}\_{1}$|
+|+m|return address|
+|+m-1|$\mathtt{var}\_m$|
 |...|...|
-|D+0|$\mathtt{var}\_1$|
+|+0|$\mathtt{var}\_1$|
 
 Note that local variables are not restricted to one byte wide. Arrays and structures, for example, will be more than one byte wide.
 
@@ -150,21 +150,21 @@ void f(uint8_t x, uint8_t y)
 
 In this case, the caller is responsible to push the arguments and the return address. As a result, the following table describes the *partially constructed* frame at the entry point of function `f`:
 
-|location|item description|
+|Offset from where D points to|item description|
 |-|-|
-|D+2|parameter `y`|
-|D+1|parameter `x`|
-|D+0|return address|
+|+2|parameter `y`|
+|+1|parameter `x`|
+|+0|return address|
 
 Note how local variables `a` and `b` are not yet allocated. Function `f` is responsible for allocating the space needed for the local variables. Because `a` and `b` are both 1-byte wide, they need a total of 2 bytes in the frame. These two bytes are allocated at the entry point of function `f`. As a result, the local variables are located lower (in terms of addresses) than the return address. The following table show the content of the frame after local variables are explicitly allocated by the entry code of function `f`:
 
-|location|item description|
+|Offset from where D points to|item description|
 |-|-|
-|D+4|parameter `y`|
-|D+3|parameter `x`|
-|D+2|return address|
-|D+1|local variable `b`|
-|D+0|local variable `a`|
+|+4|parameter `y`|
+|+3|parameter `x`|
+|+2|return address|
+|+1|local variable `b`|
+|+0|local variable `a`|
 
 The offset to items of the frame may be defined as follows:
 
@@ -193,10 +193,10 @@ f:
 
 Because the callee is responsible for popping the return address, the stack looks like the following immediately after it returns to the caller:
 
-|location|item description|
+|Offset from where D points to|item description|
 |-|-|
-|D+1|parameter `y`|
-|D+0|parameter `x`|
+|+1|parameter `y`|
+|+0|parameter `x`|
 
 Note how the return address is not on the stack. However, parameters `x` and `y` (known as arguments from the caller's perspective) are still on the stack. As per the agreement, the caller needs to deallocate these two bytes on the stack. For this example, the following TTPASM code that immediately follows `jmpi f` in the call deallocates the arguments:
 
@@ -219,11 +219,11 @@ void g(uint8_t *x, uint_8 y)
 
 There are no local variables, the call frame consists only of the return address and the two parameters as follows at the entry point of function `g`:
 
-|location|description of item|
+|Offset from where D points to|description of item|
 |-|-|
-|D+2|parameter `y`|
-|D+1|parameter `x`|
-|D+0|return address|
+|+2|parameter `y`|
+|+1|parameter `x`|
+|+0|return address|
 
 The corresponding TTPASM code can be as follows:
 
@@ -259,25 +259,25 @@ g:
 
 In an architecture that supports interrupts, hardware interrupt can occur between the execution of any two instructions. A hardware interrupt invokes (calls) the corresponding ISR (interrupt service routine). This causes the return address to the interrupted code to be pushed on the stack. Imagine the stack as follows prior to an interrupt:
 
-|location|item description|
+|Offset from where D points to|item description|
 |-|-|
-|D+0|last item pushed|
-|D-1|remnant X|
+|+0|last item pushed|
+|-1|remnant X|
 
 When an interrupt occurs, the processor pushes the return address from the ISR to the interrupted code on the stack, resulting in the following state:
 
-|location|item description|
+|Offset from where D points to|item description|
 |-|-|
-|D+1|last item pushed|
-|D+0|~~remnant X~~ return address to interrupted code|
+|+1|last item pushed|
+|+0|~~remnant X~~ return address to interrupted code|
 
 Note how "last item pushed" is not affected because it was where the stack pointer points to when the interrupt occurs. However, "remnant X" is now overwritten by the return address to resume the execution of code prior to the interrupt.
 
 After the ISR returns, the stack can be described as follows:
 
-|location|item description|
+|Offset from where D points to|item description|
 |-|-|
-|D+0|last item pushed|
-|D-1|~~remnant X~~ return address to interrupted code|
+|+0|last item pushed|
+|-1|~~remnant X~~ return address to interrupted code|
 
 From the perspective of the code that was interrupted, the state of the stack has not changed, as long as there is no reference to locations below where the stack pointer points! Note that during the execution of an ISR, more locations on the stack may be overwritten. In other words, the overwriting of the location immediately below where the stack pointer points to at the moment of the interrupt is the *minimum* part of the stack to be used during the execution of an ISR.
