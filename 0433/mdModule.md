@@ -34,7 +34,7 @@ The strength of `GitHub` is the ease of spinning off an OER project. As such, wh
 
 ## On the technical side
 
-`GitHub` supports Markdown (MD) as a markup language. MD is a fairly rich markup language that can fall back to HTML when necessary. However, even by itself, it supports normal text formatting, equations, drawing various types of diagrams, formatting tables, etc. Compared to HTML, MD is easier to learn and type even with a plain-text editor like `notepad` in Windows. There are many open-source and free previewing editors that can render MD side-by-side with the MD document. 
+`GitHub` supports Markdown (MD) as a markup language. MD is a fairly rich markup language that can fall back to HTML when necessary. However, even by itself, it supports normal text formatting, equations, drawing various types of diagrams, formatting tables, etc. Compared to HTML, MD is easier to learn and type even with a plain-text editor like `notepad` in Windows. Many open-source and free previewing editors can render MD side-by-side with the MD document. 
 
 However, the *implementation* of MD rendering at `GitHub` has many inconsistencies and issues. Many of these inconsistencies are discovered and managed in the OER project that hosts this page. The architecture of this OER project is as follows:
 
@@ -126,7 +126,7 @@ title: "Module 0241: Some module"
 
 The explanation is as follows:
 
-* `---` is the marker to begin and end the YAML (yet-another markup language) section.
+* `---` is the marker to begin and end the YAML (yet another markup language) section.
   * In this section, `title: "Module 0241: Some module"` specifies the title of the page. If this is not the format you want to use, some additional customization needs to be done.
 * `# _{{ page.title }}_` uses HTML H1 as the title of the HTML. This part is optional and you can specify alternative formatting.
 
