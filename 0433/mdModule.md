@@ -161,5 +161,7 @@ A fork is, as the name implies, a split-off point of a branch. Let us name a for
 * A major revision that takes a significant amount of time. During the revision, the `main` branch remains to be the one published. This way, learners do not get affected by the partial updates that may render a document unsuitable for publication.
 * A learner may fork a repository for interleaving notes in the source material. This is, in a way, equivalent to making a photocopy of an entire book to mark up the photocopy without affecting what other learners see in the published version.
 
-In the first case, when the revision is completed, it needs to be merged to the `main` branch. In the second case, however, a student may continue to keep a fork permanently without merging it back to the `main` branch.
+In the first case, when the revision is completed, it needs to be merged into the `main` branch. In the second case, however, a student may continue to keep a fork permanently without merging it back to the `main` branch.
+
+In the second scenario, what if the OER developers make significant revisions after the learner forked for note-taking purposes? This is where `GitHub` (it is a feature of `git`, the underlying tool) offers a unique feature. The learner can choose to "sync fork" to integrate all changes to the `main` branch of the repository to the forked branch.
 
