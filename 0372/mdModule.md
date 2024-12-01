@@ -66,7 +66,7 @@ The mutual agreement between the caller and callee starts with how the stack ope
   * on TTP, arguments are pushed contiguously (no gaps between them)
   * this implies the last argument has the highest address in a call frame
 * the return address (the address of the instruction right after the jump to the callee) is pushed after all the arguments (if any)  
-  * as a result, the return address has an address that is lower than the arguments
+  * as a result, the return address has an address that is lower than all the arguments
   * the stack pointer points to the return address at the entry point of the function being called
 * jump to the entry point of the callee
 
